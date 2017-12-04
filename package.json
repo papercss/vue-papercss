@@ -2,21 +2,30 @@
   "name": "vuejs-paper-css",
   "version": "0.0.0",
   "description": "A VueJS version of the PaperCSS framework for all your Vue projects.",
-  "main": "",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {},
-  "files": [
-    "dist/",
-    "src/"
-  ],
+  "main": "dist/papercss.js",
   "author": "Thomas Cazade <cazade.thomas@gmail.com>",
   "license": "MIT",
+  "keywords": ["papercss", "vue", "vuejs", "components", "framework"],
+  "bugs": {
+    "url": "https://github.com/papercss/vuejs-paper-css/issues"
+  },
+  "scripts": {
+    "build": "webpack --config ./build/webpack.build.conf.js -p"
+  },
   "dependencies": {
     "lodash": "^4.16.4",
     "papercss": "^1.1.0",
     "vue": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.9",
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
+  }
 }

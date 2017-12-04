@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-paper-css",
+  "name": "vuejs-papercss",
   "version": "0.0.0",
   "description": "A VueJS version of the PaperCSS framework for all your Vue projects.",
   "main": "dist/papercss.js",
@@ -13,7 +13,7 @@
     "framework"
   ],
   "bugs": {
-    "url": "https://github.com/papercss/vuejs-paper-css/issues"
+    "url": "https://github.com/papercss/vuejs-papercss/issues"
   },
   "scripts": {
     "build": "webpack --config ./build/webpack.build.conf.js -p",

@@ -1,4 +1,4 @@
-# vuejs-paper-css
+# vuejs-papercss
 
 A VueJS version of the PaperCSS framework for all your Vue projects.
 

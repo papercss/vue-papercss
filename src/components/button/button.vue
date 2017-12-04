@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="{ 'paper-btn': true, 'btn-block': block, 'disabled': disabled }" :disabled="disabled"></div>
+  <div :class="{ 'paper-btn': true, 'btn-block': block, 'disabled': disabled, size: (size) ? size : '' }" :disabled="disabled"></div>
 </template>
 
 <script>

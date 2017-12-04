@@ -1,5 +1,7 @@
 <template lang="html">
-  <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled }" :disabled="disabled"></div>
+  <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled }" :disabled="disabled">
+    <slot />
+  </div>
 </template>
 
 <script>

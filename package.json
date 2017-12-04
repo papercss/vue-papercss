@@ -5,15 +5,21 @@
   "main": "dist/papercss.js",
   "author": "Thomas Cazade <cazade.thomas@gmail.com>",
   "license": "MIT",
-  "keywords": ["papercss", "vue", "vuejs", "components", "framework"],
+  "keywords": [
+    "papercss",
+    "vue",
+    "vuejs",
+    "components",
+    "framework"
+  ],
   "bugs": {
     "url": "https://github.com/papercss/vuejs-paper-css/issues"
   },
   "scripts": {
-    "build": "webpack --config ./build/webpack.build.conf.js -p"
+    "build": "webpack --config ./build/webpack.build.conf.js -p",
+    "dev": "webpack-dev-server --config ./build/webpack.demo.conf.js"
   },
   "dependencies": {
-    "lodash": "^4.16.4",
     "papercss": "^1.1.0",
     "vue": "latest"
   },

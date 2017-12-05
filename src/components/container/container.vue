@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 @media screen and (max-width:992px) {
   .container {
     width: 85%

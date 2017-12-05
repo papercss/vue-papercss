@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 .row {
   margin-right: auto;
   margin-left: auto;

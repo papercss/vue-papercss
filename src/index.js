@@ -1,3 +1,4 @@
 import button from './components/button';
+import container from './components/container';
 
-export default button;
+export { container, button };

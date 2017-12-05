@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="row">
+  <div :class="['row', right ? 'flex-right': '', center ? 'flex-center' : '', edges ? 'flex-edges' : '', spaces ? 'flex-spaces' : '', top ? 'flex-top' : '', middle ? 'flex-middle' : '', bottom ? 'flex-bottom' : '']">
     <slot />
   </div>
 </template>
@@ -7,37 +7,37 @@
 <script>
 export default {
   props: {
-    flexRight: {
+    right: {
       type: Boolean,
       default: false,
     },
 
-    flexCenter: {
+    center: {
       type: Boolean,
       default: false,
     },
 
-    flexEdges: {
+    edges: {
       type: Boolean,
       default: false,
     },
 
-    flexSpaces: {
+    spaces: {
       type: Boolean,
       default: false,
     },
 
-    flexTop: {
+    top: {
       type: Boolean,
       default: false,
     },
 
-    flexMiddle: {
+    middle: {
       type: Boolean,
       default: false,
     },
 
-    flexBottom: {
+    bottom: {
       type: Boolean,
       default: false,
     },

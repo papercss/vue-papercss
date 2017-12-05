@@ -1,0 +1,110 @@
+<template lang="html">
+  <div class="row">
+    <slot />
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    flexRight: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexCenter: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexEdges: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexSpaces: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexTop: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexMiddle: {
+      type: Boolean,
+      default: false,
+    },
+
+    flexBottom: {
+      type: Boolean,
+      default: false,
+    },
+  },
+}
+</script>
+
+<style lang="css">
+.row {
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 1rem
+}
+
+.row.flex-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+.row.flex-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.row.flex-edges {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.row.flex-spaces {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.row.flex-top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+
+.row.flex-middle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.row.flex-bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+</style>

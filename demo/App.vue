@@ -1,9 +1,9 @@
 <template lang="html">
 	<p-container id="demo" class="paper">
-		<h1>PaperCSS for VueJS</h1>
+		<h1 class="text-center">PaperCSS for VueJS</h1>
 
 		<div id="demo-content" class="demo">
-			<h3>Grid system</h3>
+			<h2>Grid system</h2>
 
       <p-container id="grid-demo" fluid>
         <p-row>
@@ -74,7 +74,7 @@
         </p-row>
       </p-container>
 
-			<h3>Buttons</h3>
+			<h2>Buttons</h2>
 
 			<p-container id="buttons-demo" fluid>
 				<p-button>Basic button</p-button>
@@ -82,19 +82,91 @@
 				<p-button :large="true">Large button</p-button>
 				<p-button :disabled="true">Disabled button</p-button>
 			</p-container>
+
+      <h2>Cards</h2>
+
+      <p-container id="cards-demo" fluid>
+        <h4>Full card example</h4>
+
+        <p-card
+          imgSrc="https://picsum.photos/768"
+          imgAlt="Card image"
+          title="My awesome Paper card!"
+          subtitle="Nice looking subtitle."
+          text="Notice that the card width in this example have been set to 20rem, otherwise it will try to fill the current container/row where the card is.">
+          <p-button>Let me go here!</p-button>
+        </p-card>
+
+        <h4>Card title, text, links</h4>
+
+        <p-card
+          title="My awesome Paper card!"
+          subtitle="Nice looking subtitle."
+          text="This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.">
+          <a class="card-link" href="#">First link</a>
+          <a class="card-link" href="#">Second link</a>
+        </p-card>
+
+				<h4>Image on top or bottom</h4>
+
+	      <p-card
+	        imgBottom
+	        imgSrc="https://picsum.photos/550/250"
+	        imgAlt="Card image"
+	        title="My awesome Paper card!"
+	        subtitle="Nice looking subtitle."
+	        text="You can also place image on the bottom of the card.">
+	        <p-button>Let me go here!</p-button>
+	      </p-card>
+
+	      <h4>Header and footer</h4>
+
+	      <p-card
+	        header="Header"
+	        footer="Footer"
+	        title="My awesome Paper card!"
+	        subtitle="Nice looking subtitle."
+	        text="You can also place image on the bottom of the card.">
+	        <p-button>Let me go here!</p-button>
+	      </p-card>
+      </p-container>
+
+      <h2>Badges</h2>
+
+      <p-container id="badges-demo" fluid>
+        <h1>Example h1 heading <p-badge>123</p-badge></h1>
+        <h2>Example h2 heading <p-badge secondary>123</p-badge></h2>
+        <h3>Example h3 heading <p-badge success>123</p-badge></h3>
+        <h4>Example h4 heading <p-badge warning>123</p-badge></h4>
+        <h5>Example h5 heading <p-badge danger>123</p-badge></h5>
+        <h6>Example h6 heading <p-badge>123</p-badge></h6>
+      </p-container>
+
+      <h2>Alerts</h2>
+
+      <p-container id="alerts-demo" fluid>
+        <p-alert primary>Alert-primary</p-alert>
+        <p-alert secondary>Alert-secondary</p-alert>
+        <p-alert success>Alert-success</p-alert>
+        <p-alert warning>Alert-warning</p-alert>
+        <p-alert danger>Alert-danger</p-alert>
+      </p-container>
 		</div>
 	</p-container>
 </template>
 
 <script>
-import { button, container, row, col } from '../src';
+import { container, row, col, button, card, badge, alert } from '../src';
 
 export default {
 	components: {
-		pButton: button,
 		pContainer: container,
 		pRow: row,
 		pCol: col,
+    pButton: button,
+    pCard: card,
+		pBadge: badge,
+    pAlert: alert,
 	}
 }
 </script>

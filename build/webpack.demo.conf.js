@@ -22,6 +22,7 @@ module.exports = {
     alias: {
       'papercss-vue': path.join(__dirname, '..', 'src'),
       'vue$': path.join(modulesDir, 'vue/dist/vue.common.js'),
+      '~': path.resolve(__dirname, '../node_modules'),
     },
   },
 
@@ -31,9 +32,19 @@ module.exports = {
 
   module: {
     loaders: [
-			{ test: /\.vue$/, loader: 'vue-loader' },
+			{
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': ['css-loader', 'sass-loader'],
+            'sass': ['css-loader', 'sass-loader?indentedSyntax'],
+          },
+        },
+      },
       { test: /\.js$/, loader: 'babel-loader' },
       { test: /\.png$/, loader: 'file-loader' },
+      { test: /\.scss$/, loader: 'sass-loader' },
     ],
   },
 }

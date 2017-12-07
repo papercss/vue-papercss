@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
 
 html {
-  box-sizing: border-box;
   font-family: Neucha, sans-serif;
   font-size: 20px;
+
+  box-sizing: border-box;
+
   color: #41403e;
 }
 
@@ -46,6 +48,21 @@ h6 {
   font-size: .8rem
 }
 
+a {
+  text-decoration: none;
+
+  background-image: linear-gradient(5deg,transparent 65%,#0071de 80%,transparent 90%),linear-gradient(165deg,transparent 5%,#0071de 15%,transparent 25%),linear-gradient(165deg,transparent 45%,#0071de 55%,transparent 65%),linear-gradient(15deg,transparent 25%,#0071de 35%,transparent 50%);
+  background-repeat: repeat-x;
+  background-position: 0 90%;
+  background-size: 4px 3px
+}
+
+a:visited {
+  text-decoration: none;
+
+  color: #41403e
+}
+
 .text-left {
   text-align: left
 }
@@ -64,16 +81,18 @@ a, button, input, option, p, select, table, tbody, td, textarea, th, thead, tr {
 
 img {
   display: block;
+
   max-width: 100%;
   height: auto;
 }
 
 .paper {
-  border: 1px solid #c1c0bd;
-  background-color: #fff;
-  padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding: 2rem;
+
+  border: 1px solid #c1c0bd;
+  background-color: #fff;
   -webkit-box-shadow: -1px 5px 35px -9px rgba(0,0,0,.2);
   -moz-box-shadow: -1px 5px 35px -9px rgba(0,0,0,.2);
   box-shadow: -1px 5px 35px -9px rgba(0,0,0,.2)
@@ -81,10 +100,10 @@ img {
 
 @media screen and (max-width:480px) {
   .paper {
-    padding: 1rem;
     width: 100%;
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+    padding: 1rem
   }
 }
 

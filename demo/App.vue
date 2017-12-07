@@ -151,12 +151,40 @@
         <p-alert warning>Alert-warning</p-alert>
         <p-alert danger>Alert-danger</p-alert>
       </p-container>
+
+			<h2>Articles</h2>
+
+			<p-container id="articles-demo" fluid>
+				<p-article
+          title="Article Title"
+          titleLink="article-demo"
+          meta="Article meta text"
+          author="Super User"
+          authorLink="super-user"
+          date="24 November 2017"
+          category="Blog"
+          categoryLink="blog-category"
+          lead="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus excepturi, consequatur illo rerum, non sint asperiores dolore sapiente, vitae blanditiis. Officiis at quaerat modi earum, fugiat magni impedit, aperiam.">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?
+          </p>
+
+          <p-row>
+            <p-button>Read more</p-button>
+            <p-button>5 comments</p-button>
+          </p-row>
+        </p-article>
+			</p-container>
 		</div>
 	</p-container>
 </template>
 
 <script>
-import { container, row, col, button, card, badge, alert } from '../src';
+import { container, row, col, button, card, badge, alert, article } from '../src';
 
 export default {
 	components: {
@@ -167,6 +195,7 @@ export default {
     pCard: card,
 		pBadge: badge,
     pAlert: alert,
+		pArticle: article,
 	}
 }
 </script>

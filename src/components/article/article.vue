@@ -68,27 +68,5 @@ export default {
 </script>
 
 <style scoped lang="css">
-article .article-title {
-  font-size: 3rem
-}
-
-article .article-meta {
-  font-size: 15px;
-  color: #868e96
-}
-
-article .article-meta a {
-  color: #41403e;
-  background-image: none
-}
-
-article .article-meta a:hover {
-  color: rgba(0,0,0,.7)
-}
-
-article .text-lead {
-  font-size: 30px;
-  line-height: 1.3;
-  margin: 35px 0
-}
+@import url('../../../node_modules/papercss/dist/components/article.css');
 </style>

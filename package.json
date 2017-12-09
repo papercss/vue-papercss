@@ -20,7 +20,7 @@
     "dev": "webpack-dev-server --config ./build/webpack.demo.conf.js"
   },
   "dependencies": {
-    "papercss": "^1.1.0",
+    "papercss": "git://github.com/papercss/papercss.git#separate-components",
     "vue": "latest",
     "vue-router": "^3.0.1"
   },

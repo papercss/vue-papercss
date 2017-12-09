@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "papercss": "git://github.com/papercss/papercss.git#separate-components",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

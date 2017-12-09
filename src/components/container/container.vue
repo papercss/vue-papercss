@@ -16,24 +16,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-@media screen and (max-width:992px) {
-  .container {
-    width: 85%
-  }
-}
-
-@media screen and (max-width:480px) {
-  .container {
-    width: 90%
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 960px;
-  position: relative;
-  margin: 0 auto
-}
+@import url('../../../node_modules/papercss/dist/components/container.css');
 
 /* .container.fluid is not a core PaperCSS class */
 .container.fluid {

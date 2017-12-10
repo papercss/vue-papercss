@@ -1,35 +1,31 @@
 <template>
   <div class="demo">
     <h3>{{ title }}</h3>
-    <div :id="'demo-' + title">
+    <div ref="sourcecode" :id="'demo-' + title">
       <slot></slot>
     </div>
-    <p-pre v-if="this.code">{{ code }}</p-pre>
+    <p data-height="298" data-theme-id="0" data-slug-hash="aVePdm" data-default-tab="css,result" data-user="cbass1205" data-embed-version="2" data-pen-title="aVePdm" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/cbass1205/pen/aVePdm/">aVePdm</a> by Caleb Bassham (<a href="https://codepen.io/cbass1205">@cbass1205</a>) on <a href="https://codepen.io">CodePen</a>.</p>
   </div>
 </template>
 
 <script>
-  import {container, pre} from '../../src'
+  import { container } from '../../src'
 
   export default {
     name: "demo",
     components: {
-      pContainer: container,
-      pPre: pre
+      pContainer: container
     },
     props: {
       title: {
         type: String,
-        default: ''
+        default: '',
       }
     },
     data: function () {
       return {
         code: ''
       }
-    },
-    mounted: function () {
-      this.code = document.getElementById("demo-" + this.title).innerHTML
     }
   }
 </script>

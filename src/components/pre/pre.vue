@@ -1,13 +1,13 @@
 <template>
   <pre>
-    </slot></slot>
+    <slot></slot>
   </pre>
 </template>
 
 <script>
-    export default {
-        name: "pre"
-    }
+  export default {
+    name: "pre"
+  }
 </script>
 
 <style scoped lang="css">

@@ -86,8 +86,8 @@
       <p-button :small="true">Small button</p-button>
       <p-button :large="true">Large button</p-button>
       <p-button :disabled="true">Disabled button</p-button>
-      <p-button primary>Primary</p-button>
-      <p-button secondary>Secondary</p-button>
+      <p-button color="primary">Primary</p-button>
+      <p-button color="secondary">Secondary</p-button>
     </p-container>
 
     <h2>Cards</h2>

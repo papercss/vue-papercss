@@ -1,5 +1,5 @@
 <template lang="html">
-  <span :class="['badge', secondary ? 'secondary' : '', success ? 'success' : '', warning ? 'warning' : '', danger ? 'danger' : '']">
+  <span :class="{ 'badge': true, [color]: color }">
     <slot />
   </span>
 </template>
@@ -7,31 +7,11 @@
 <script>
 export default {
 	props: {
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-
-    secondary: {
-      type: Boolean,
-      default: false,
-    },
-
-    success: {
-      type: Boolean,
-      default: false,
-    },
-
-    warning: {
-      type: Boolean,
-      default: false,
-    },
-
-    danger: {
-      type: Boolean,
-      default: false,
-    },
-	},
+    color: {
+      type: String,
+      default: ''
+    }
+	}
 }
 </script>
 

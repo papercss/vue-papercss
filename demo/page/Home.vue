@@ -143,16 +143,16 @@
         <p-badge>123</p-badge>
       </h1>
       <h2>Example h2 heading
-        <p-badge secondary>123</p-badge>
+        <p-badge color="secondary">123</p-badge>
       </h2>
       <h3>Example h3 heading
-        <p-badge success>123</p-badge>
+        <p-badge color="success">123</p-badge>
       </h3>
       <h4>Example h4 heading
-        <p-badge warning>123</p-badge>
+        <p-badge color="warning">123</p-badge>
       </h4>
       <h5>Example h5 heading
-        <p-badge danger>123</p-badge>
+        <p-badge color="danger">123</p-badge>
       </h5>
       <h6>Example h6 heading
         <p-badge>123</p-badge>

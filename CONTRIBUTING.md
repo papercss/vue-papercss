@@ -41,13 +41,15 @@ Before you begin to code, make sure that you have all of the projects decencies 
  1. From terminal, navigate to the project folder.
  2. Create a new branch, for example `git checkout -b feature-card`
  3. Make sure that the new branch is up to date with the `develop` branch of the main project. To update the branch first fetch the upstream with `git fetch upstream` and then merge `upstream/develop` into your new branch with `git merge upstream/develop`.
- 4. Implement your changes.
- 5. Commit your changes, for example `git commit -m "Added cards component"`.
- 6. Push changes to your forked project on GitHub, for example `git push origin feature-card`.
- 7. Create a pull request from your `feature-card` branch into the `develop` branch of the main project on GitHub.
- 8. Resolve any detected conflicts,
- 9. Fix/discuss any requested changes from peers.
- 10. SUCCESS!
+ 4. Start the dev server (`yarn dev` or `npm run dev`)
+ 5. Implement your changes. If you add a new component or add a new feature to an existing component, it would help to add a demo for it.
+ 6. Make sure that your changes work and display as intended.
+ 7. Commit your changes, for example `git commit -m "Added cards component"`.
+ 8. Push changes to your forked project on GitHub, for example `git push origin feature-card`.
+ 9. Create a pull request from your `feature-card` branch into the `develop` branch of the main project on GitHub.
+ 10. Resolve any detected conflicts.
+ 11. Fix/discuss any requested changes from peers.
+ 12. SUCCESS!
  
 [slack]: https://papercss.slack.com/messages/C8C6J8YTD
 [git]: https://git-scm.com

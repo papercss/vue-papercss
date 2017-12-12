@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './page/Home'
 import Download from './page/Download'
 import Card from './page/component/Card'
+import Button from './page/component/Button'
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/component/card',
       name: 'card',
       component: Card
+    },
+    {
+      path: '/component/button',
+      name: 'button',
+      component: Button
     }
   ]
 })

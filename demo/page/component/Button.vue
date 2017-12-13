@@ -6,6 +6,14 @@
       <p-button>Default</p-button>
     </Demo>
 
+    <Demo title="Colored Buttons">
+      <p-button color="primary">Primary</p-button>
+      <p-button color="secondary">Secondary</p-button>
+      <p-button color="success">Success</p-button>
+      <p-button color="warning">Warning</p-button>
+      <p-button color="danger">Danger</p-button>
+    </Demo>
+
     <Demo title="Large Button">
       <p-button large>Large</p-button>
     </Demo>

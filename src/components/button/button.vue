@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled }" :disabled="disabled">
+  <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled, ['btn-' + color]: color }" :disabled="disabled">
     <slot />
   </div>
 </template>
@@ -26,7 +26,12 @@ export default {
 			type: Boolean,
 			default: false,
 		},
-	},
+
+    color: {
+		  type: String,
+      default: ''
+    }
+	}
 }
 </script>
 

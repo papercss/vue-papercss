@@ -4,6 +4,7 @@ import Home from './page/Home'
 import Download from './page/Download'
 import Card from './page/component/Card'
 import Button from './page/component/Button'
+import Article from './page/component/Article'
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/component/button',
       name: 'button',
       component: Button
+    },
+    {
+      path: '/component/article',
+      name: 'article',
+      component: Article
     }
   ]
 })

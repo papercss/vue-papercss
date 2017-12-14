@@ -5,6 +5,7 @@ import Download from './page/Download'
 import Card from './page/component/Card'
 import Button from './page/component/Button'
 import Article from './page/component/Article'
+import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
 
 Vue.use(Router);
@@ -35,6 +36,9 @@ export default new Router({
       path: '/component/article',
       name: 'article',
       component: Article
+      path: '/component/badge',
+      name: 'badge',
+      component: Badge
     },
     {
       path: '/component/alert',

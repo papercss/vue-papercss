@@ -7,11 +7,11 @@
     </Demo>
 
     <Demo title="Colored Alerts">
-      <p-alert primary>Primary</p-alert>
-      <p-alert secondary>secondary</p-alert>
-      <p-alert success>Success</p-alert>
-      <p-alert warning>Warning</p-alert>
-      <p-alert danger>Danger</p-alert>
+      <p-alert color="primary">Primary</p-alert>
+      <p-alert color="secondary">secondary</p-alert>
+      <p-alert color="success">Success</p-alert>
+      <p-alert color="warning">Warning</p-alert>
+      <p-alert color="danger">Danger</p-alert>
     </Demo>
   </div>
 </template>

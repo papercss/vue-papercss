@@ -4,6 +4,7 @@ import Home from './page/Home'
 import Download from './page/Download'
 import Card from './page/component/Card'
 import Button from './page/component/Button'
+import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
 
@@ -32,6 +33,9 @@ export default new Router({
       component: Button
     },
     {
+      path: '/component/article',
+      name: 'article',
+      component: Article
       path: '/component/badge',
       name: 'badge',
       component: Badge

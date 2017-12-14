@@ -164,11 +164,11 @@
     <h2>Alerts</h2>
 
     <p-container id="alerts-demo" fluid>
-      <p-alert primary>Alert-primary</p-alert>
-      <p-alert secondary>Alert-secondary</p-alert>
-      <p-alert success>Alert-success</p-alert>
-      <p-alert warning>Alert-warning</p-alert>
-      <p-alert danger>Alert-danger</p-alert>
+      <p-alert color="primary">Alert-primary</p-alert>
+      <p-alert color="secondary">Alert-secondary</p-alert>
+      <p-alert color="success">Alert-success</p-alert>
+      <p-alert color="warning">Alert-warning</p-alert>
+      <p-alert color="danger">Alert-danger</p-alert>
     </p-container>
 
     <h2>Articles</h2>

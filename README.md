@@ -3,7 +3,7 @@
     <img src="https://github.com/papercss/papercss/blob/master/img/favicon.ico?raw=true" alt="PaperCSS logo">
   </a>
 
-  <h3 align="center">PaperCSS</h3>
+  <h3 align="center">PaperCSS for VueJS</h3>
 
   <p align="center">
     An adapted version of the less formal CSS framework, for VueJS.<br>

@@ -36,6 +36,8 @@ export default new Router({
       path: '/component/article',
       name: 'article',
       component: Article
+    },
+    {
       path: '/component/badge',
       name: 'badge',
       component: Badge

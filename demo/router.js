@@ -7,6 +7,7 @@ import Button from './page/component/Button'
 import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
+import Popover from './page/component/Popover'
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/component/alert',
       name: 'alert',
       component: Alert
+    },
+    {
+      path: '/component/popover',
+      name: 'popover',
+      component: Popover
     }
   ]
 })

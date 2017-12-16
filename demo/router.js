@@ -7,6 +7,7 @@ import Button from './page/component/Button'
 import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
+import Table from './page/component/Table'
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/component/alert',
       name: 'alert',
       component: Alert
+    },
+    {
+      path: '/component/table',
+      name: 'table',
+      component: Table
     }
   ]
 })

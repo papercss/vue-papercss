@@ -7,6 +7,7 @@ import Button from './page/component/Button'
 import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
+import Table from './page/component/Table'
 import Popover from './page/component/Popover'
 import Flexbox from './page/Flexbox'
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/component/alert',
       name: 'alert',
       component: Alert
+    },
+    {
+      path: '/component/table',
+      name: 'table',
+      component: Table
     },
     {
       path: '/component/popover',

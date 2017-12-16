@@ -7,13 +7,9 @@
 </template>
 
 <script>
-  import { button } from '../../src'
 
   export default {
     name: "not-found",
-    components: {
-      pButton: button
-    }
   }
 </script>
 

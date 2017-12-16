@@ -7,5 +7,6 @@ import badge from './components/badge';
 import alert from './components/alert';
 import article from './components/article';
 import pre from './components/pre';
+import popover from './components/popover'
 
-export { container, row, col, button, card, badge, alert, article, pre };
+export { container, row, col, button, card, badge, alert, article, pre, popover };

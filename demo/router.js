@@ -8,6 +8,7 @@ import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
 import Popover from './page/component/Popover'
+import Flexbox from './page/Flexbox'
 
 Vue.use(Router);
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/component/popover',
       name: 'popover',
       component: Popover
+    },
+    {
+      path: '/flexbox',
+      name: 'flexbox',
+      component: Flexbox
     }
   ]
 })

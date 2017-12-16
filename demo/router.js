@@ -8,6 +8,7 @@ import Article from './page/component/Article'
 import Badge from './page/component/Badge'
 import Alert from './page/component/Alert'
 import Table from './page/component/Table'
+import Popover from './page/component/Popover'
 
 Vue.use(Router);
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/component/table',
       name: 'table',
       component: Table
+    },
+    {
+      path: '/component/popover',
+      name: 'popover',
+      component: Popover
     }
   ]
 })

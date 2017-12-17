@@ -10,6 +10,7 @@ import Alert from './page/component/Alert'
 import Table from './page/component/Table'
 import Popover from './page/component/Popover'
 import Flexbox from './page/Flexbox'
+import NotFound from './page/NotFound'
 
 Vue.use(Router);
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/flexbox',
       name: 'flexbox',
       component: Flexbox
+    },
+    {
+      path: '*',
+      name: 'not-found',
+      component: NotFound
     }
   ]
 })

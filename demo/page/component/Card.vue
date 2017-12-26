@@ -50,12 +50,13 @@
 
 <script>
   import Demo from '../../component/Demo'
-  import {card} from '../../../src'
+  import {card, button} from '../../../src'
 
   export default {
     name: "card",
     components: {
       pCard: card,
+      pButton: button,
       Demo
     }
   }

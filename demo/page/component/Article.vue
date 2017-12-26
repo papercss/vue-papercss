@@ -34,11 +34,12 @@
 
 <script>
   import Demo from '../../component/Demo'
-  import { button, article } from '../../../src'
+  import { row, button, article } from '../../../src'
 
   export default {
     name: "article",
     components: {
+      pRow: row,
       pButton: button,
       pArticle: article,
       Demo

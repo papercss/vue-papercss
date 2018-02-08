@@ -20,8 +20,9 @@
     "dev": "webpack-dev-server --config ./build/webpack.demo.conf.js"
   },
   "dependencies": {
-    "papercss": "^1.1.0",
-    "vue": "latest"
+    "papercss": "^1.3.1",
+    "vue": "^2.5.9",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

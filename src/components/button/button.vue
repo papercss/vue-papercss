@@ -1,6 +1,6 @@
 <template lang="html">
   <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled, ['btn-' + color]: color }" :disabled="disabled">
-    <slot />
+		<a :href="href"><slot /></a>
   </div>
 </template>
 
@@ -30,7 +30,12 @@ export default {
     color: {
 		  type: String,
       default: ''
-    }
+    },
+
+		href:{
+			type:String,
+			default:''
+		}
 	}
 }
 </script>

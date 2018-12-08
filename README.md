@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getpapercss.com">
-    <img src="https://github.com/papercss/papercss/blob/master/img/favicon.ico?raw=true" alt="PaperCSS logo">
+    <img src="https://raw.githubusercontent.com/papercss/papercss/master/docs/static/favicon.ico?raw=true" alt="PaperCSS logo">
   </a>
 
   <h3 align="center">PaperCSS for VueJS</h3>

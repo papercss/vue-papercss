@@ -1,3 +1,3 @@
-import pre from './pre'
+import pre from './pre.vue';
 
-export default pre
+export default pre;

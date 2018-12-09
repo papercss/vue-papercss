@@ -32,4 +32,7 @@ export default {
       VERSION: JSON.stringify(pkg.version),
     }),
   ],
+  watch: {
+    include: 'src/**',
+  },
 }

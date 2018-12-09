@@ -19,7 +19,8 @@
     "build": "npm run build:browser && npm run build:es && npm run build:umd",
     "build:browser": "rollup --config build/rollup.config.browser.js",
     "build:es": "rollup --config build/rollup.config.es.js",
-    "build:umd": "rollup --config build/rollup.config.umd.js"
+    "build:umd": "rollup --config build/rollup.config.umd.js",
+    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch"
   },
   "dependencies": {
     "papercss": "^1.6.0",

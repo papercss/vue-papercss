@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/container.css');
+@import url('~papercss/dist/components/container.css');
 
 /* .container.fluid is not a core PaperCSS class */
 .container.fluid {

@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/flexbox.css');
+@import url('~papercss/dist/components/flexbox.css');
 </style>

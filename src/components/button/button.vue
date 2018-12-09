@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/buttons.css');
+@import url('~papercss/dist/components/buttons.css');
 </style>

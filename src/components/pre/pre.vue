@@ -11,5 +11,5 @@
 </script>
 
 <style scoped lang="css">
-  @import url('../../../node_modules/papercss/dist/components/code.css');
+  @import url('~papercss/dist/components/code.css');
 </style>

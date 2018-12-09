@@ -21,5 +21,5 @@
 </script>
 
 <style lang="css" scoped>
-  @import url('../../../node_modules/papercss/dist/components/tables.css');
+  @import url('~papercss/dist/components/tables.css');
 </style>

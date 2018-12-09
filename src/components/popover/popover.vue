@@ -35,5 +35,5 @@
 </script>
 
 <style lang="css" scoped>
-  @import url('../../../node_modules/papercss/dist/components/popovers.css');
+  @import url('~papercss/dist/components/popovers.css');
 </style>

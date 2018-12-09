@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/badges.css');
+@import url('~papercss/dist/components/badges.css');
 </style>

@@ -19,5 +19,9 @@
   "dependencies": {
     "papercss": "^1.6.0",
     "vue": "^2.5.18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0"
   }
 }

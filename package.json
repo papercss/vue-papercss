@@ -16,8 +16,9 @@
     "url": "https://github.com/papercss/vuejs-papercss/issues"
   },
   "scripts": {
-    "build": "npm run build:browser",
-    "build:browser": "rollup --config build/rollup.config.browser.js"
+    "build": "npm run build:browser && npm run build:es",
+    "build:browser": "rollup --config build/rollup.config.browser.js",
+    "build:es": "rollup --config build/rollup.config.es.js"
   },
   "dependencies": {
     "papercss": "^1.6.0",

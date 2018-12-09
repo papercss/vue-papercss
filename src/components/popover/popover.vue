@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div style="display: inline-block">
     <div v-if="position == 'top'" :popover-top="text" style="margin: 0; padding: 0">
       <slot></slot>

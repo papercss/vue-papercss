@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <span :class="{ 'badge': true, [color]: color }">
     <slot />
   </span>

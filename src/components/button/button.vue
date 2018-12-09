@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div :class="{ 'paper-btn': true, 'btn-block': block, 'btn-small': small, 'btn-large': large, 'disabled': disabled, ['btn-' + color]: color }" :disabled="disabled">
 		<a :href="href"><slot /></a>
   </div>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div :class="{'alert': true, ['alert-' + color]: color }">
     <slot />
   </div>

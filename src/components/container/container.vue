@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div :class="{ 'container': true, 'fluid': fluid }">
     <slot />
   </div>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="card">
     <div v-if="header" class="card-header">{{header}}</div>
 

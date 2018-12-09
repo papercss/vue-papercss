@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <article class="article">
     <h1 class="article-title">
       <a :href="'#' + titleLink">{{title}}</a>

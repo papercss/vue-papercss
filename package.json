@@ -15,7 +15,10 @@
   "bugs": {
     "url": "https://github.com/papercss/vuejs-papercss/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "npm run build:browser",
+    "build:browser": "rollup --config build/rollup.config.browser.js"
+  },
   "dependencies": {
     "papercss": "^1.6.0",
     "vue": "^2.5.18"

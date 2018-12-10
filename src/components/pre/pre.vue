@@ -9,7 +9,3 @@
     name: "pre"
   }
 </script>
-
-<style scoped lang="css">
-  @import url('~papercss/dist/components/code.css');
-</style>

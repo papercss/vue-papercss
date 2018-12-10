@@ -1,3 +1,12 @@
+import { registerComponent, vueUse } from '../../utils';
 import popover from './popover.vue';
 
-export default popover;
+const PopoverPlugin = {
+  install(Vue) {
+    registerComponent(Vue, 'PPopover', popover);
+  }
+};
+
+vueUse(PopoverPlugin);
+
+export default PopoverPlugin;

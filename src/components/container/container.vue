@@ -14,13 +14,3 @@ export default {
   },
 }
 </script>
-
-<style scoped lang="css">
-@import url('~papercss/dist/components/container.css');
-
-/* .container.fluid is not a core PaperCSS class */
-.container.fluid {
-  width: 100% !important;
-  max-width: none !important;
-}
-</style>

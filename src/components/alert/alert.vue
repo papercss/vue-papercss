@@ -14,7 +14,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="css">
-@import url('~papercss/dist/components/alerts.css');
-</style>

@@ -33,7 +33,3 @@
     }
   }
 </script>
-
-<style lang="css" scoped>
-  @import url('~papercss/dist/components/popovers.css');
-</style>

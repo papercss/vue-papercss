@@ -19,7 +19,3 @@
     }
   }
 </script>
-
-<style lang="css" scoped>
-  @import url('~papercss/dist/components/tables.css');
-</style>

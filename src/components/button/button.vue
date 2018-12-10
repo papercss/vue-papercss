@@ -39,7 +39,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped lang="css">
-@import url('~papercss/dist/components/buttons.css');
-</style>

@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'PBadge',
 	props: {
     color: {
       type: String,
@@ -14,7 +15,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped lang="css">
-@import url('~papercss/dist/components/badges.css');
-</style>

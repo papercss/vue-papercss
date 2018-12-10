@@ -1,4 +1,5 @@
 import PAlert from './alert';
+import PArticle from './article';
 import PBadge from './badge';
 import PButton from './button';
 import PCard from './card';
@@ -11,6 +12,7 @@ import PTable from './table';
 
 export {
   PAlert,
+  PArticle,
   PBadge,
   PButton,
   PCard,

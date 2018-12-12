@@ -9,6 +9,7 @@ import PContainer from './container';
 import PFormGroup from './form-group';
 import PPopover from './popover';
 import PPre from './pre';
+import PProgress from './progress';
 import PRow from './row';
 import PTable from './table';
 
@@ -24,6 +25,7 @@ export {
   PFormGroup,
   PPopover,
   PPre,
+  PProgress,
   PRow,
   PTable,
 };

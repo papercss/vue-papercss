@@ -47,3 +47,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.paper-btn a {
+  background-image: none;
+}
+</style>

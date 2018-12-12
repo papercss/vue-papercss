@@ -4,6 +4,7 @@ import PBadge from './badge';
 import PButton from './button';
 import PCard from './card';
 import PCol from './col';
+import PCollapsible from './collapsible';
 import PContainer from './container';
 import PPopover from './popover';
 import PPre from './pre';
@@ -17,6 +18,7 @@ export {
   PButton,
   PCard,
   PCol,
+  PCollapsible,
   PContainer,
   PPopover,
   PPre,

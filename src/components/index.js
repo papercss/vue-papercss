@@ -6,6 +6,7 @@ import PCard from './card';
 import PCol from './col';
 import PCollapsible from './collapsible';
 import PContainer from './container';
+import PFormGroup from './form-group';
 import PPopover from './popover';
 import PPre from './pre';
 import PRow from './row';
@@ -20,6 +21,7 @@ export {
   PCol,
   PCollapsible,
   PContainer,
+  PFormGroup,
   PPopover,
   PPre,
   PRow,

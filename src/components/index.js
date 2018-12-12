@@ -12,6 +12,7 @@ import PPre from './pre';
 import PProgress from './progress';
 import PRow from './row';
 import PTable from './table';
+import { PTabs, PTab } from './tabs';
 
 export {
   PAlert,
@@ -28,4 +29,6 @@ export {
   PProgress,
   PRow,
   PTable,
+  PTabs,
+  PTab,
 };

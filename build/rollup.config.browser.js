@@ -1,3 +1,5 @@
+import { terser } from "rollup-plugin-terser";
+
 import rollupBase from './rollup.config.base';
 
 const config = Object.assign({}, rollupBase, {
@@ -8,5 +10,7 @@ const config = Object.assign({}, rollupBase, {
     name: 'VuePaperCSS',
   },
 });
+
+config.plugins.push(terser());
 
 export default config;

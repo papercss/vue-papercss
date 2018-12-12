@@ -1,5 +1,9 @@
 <template>
-  <div :class="{'alert': true, ['alert-' + color]: color }">
+  <div :class="{
+    'alert': true,
+    'alert-primary': !color,
+    ['alert-' + color]: color,
+  }">
     <slot />
 
     <span v-if="dismissible" class="btn-close" @click="dismiss()">X</span>

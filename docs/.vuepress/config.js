@@ -16,6 +16,7 @@ module.exports = {
     sidebar: [
       '',
       '/quick-start/',
+      '/utilities/',
       {
         title: 'Components',
         collapsable: false,

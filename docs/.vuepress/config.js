@@ -8,16 +8,17 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
+      { text: 'Quick-start', link: '/quick-start/' },
+      { text: 'Components', link: '/components/' },
+      { text: 'PaperCSS', link: 'https://getpapercss.com' },
     ],
 
-    sidebar: {
-      '/guide/': ['/'],
-    },
+    sidebar: ['', '/quick-start/', '/components/'],
 
     repo: 'papercss/vue-papercss',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Is something wrong or missing? Edit this page on GitHub.',
+    displayAllHeaders: true,
   },
 };

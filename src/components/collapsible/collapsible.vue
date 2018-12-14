@@ -20,11 +20,13 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
 
     show: {
       type: Boolean,
       default: false,
+      required: false,
     },
   },
 

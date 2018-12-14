@@ -7,11 +7,13 @@
 <script>
 export default {
   name: 'PBadge',
+
 	props: {
     color: {
       type: String,
-      default: ''
-    }
-	}
+      default: '',
+      required: false,
+    },
+	},
 }
 </script>

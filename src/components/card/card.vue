@@ -23,41 +23,49 @@ export default {
     title: {
       type: String,
       default: '',
+      required: false,
     },
 
     subtitle: {
       type: String,
       default: '',
+      required: false,
     },
 
     text: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgSrc: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgAlt: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgBottom: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     header: {
       type: String,
       default: '',
+      required: false,
     },
 
     footer: {
       type: String,
       default: '',
+      required: false,
     },
   },
 }

@@ -8,7 +8,13 @@
     'btn-primary': !color,
     ['btn-' + color]: color,
   }" :disabled="disabled">
-		<a :href="href"><slot /></a>
+    <a v-if="href" :href="href">
+      <slot />
+    </a>
+
+    <div v-else>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -17,32 +23,38 @@ export default {
 	props: {
 		block: {
 			type: Boolean,
-			default: false,
+      default: false,
+      required: false,
 		},
 
 		small: {
 			type: Boolean,
-			default: false,
+      default: false,
+      required: false,
 		},
 
     large: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
 		disabled: {
 			type: Boolean,
-			default: false,
+      default: false,
+      required: false,
 		},
 
     color: {
 		  type: String,
-      default: ''
+      default: '',
+      required: false,
     },
 
-		href:{
-			type:String,
-			default:''
+		href: {
+			type: String,
+      default: '',
+      required: false,
 		}
 	}
 }

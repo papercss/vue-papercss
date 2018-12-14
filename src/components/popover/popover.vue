@@ -19,17 +19,21 @@
 </template>
 
 <script>
-  export default {
-    name: "popover",
-    props: {
-      position: {
-        type: String,
-        default: 'top'
-      },
-      text: {
-        type: String,
-        default: ''
-      }
-    }
-  }
+export default {
+  name: 'popover',
+
+  props: {
+    position: {
+      type: String,
+      default: 'top',
+      required: false,
+    },
+
+    text: {
+      type: String,
+      default: '',
+      required: true,
+    },
+  },
+}
 </script>

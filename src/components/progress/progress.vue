@@ -18,21 +18,25 @@ export default {
     width: {
       type: Number,
       value: 0,
+      required: true,
     },
 
     color: {
       type: String,
       value: '',
+      required: false,
     },
 
     label: {
       type: (String | undefined),
       value: undefined,
+      required: false,
     },
 
     striped: {
       type: Boolean,
       value: false,
+      required: false,
     },
   },
 }

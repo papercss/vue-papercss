@@ -22,11 +22,13 @@ export default {
     color: {
       type: String,
       default: '',
+      required: false,
     },
 
     dismissible: {
       type: Boolean,
       default: false,
+      required: false,
     },
   },
 
@@ -41,7 +43,7 @@ export default {
         this.$el.classList.remove('closed');
         this.displayed = true;
       }
-    }
+    },
   },
 }
 </script>

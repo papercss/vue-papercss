@@ -32,46 +32,55 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
 
     meta: {
       type: String,
       default: '',
+      required: false,
     },
 
     lead: {
       type: String,
       default: '',
+      required: true,
     },
 
     titleLink: {
       type: String,
       default: '',
+      required: true,
     },
 
     author: {
       type: String,
       default: '',
+      required: false,
     },
 
     authorLink: {
       type: String,
       default: '',
+      required: false,
     },
 
     date: {
       type: String,
       default: '',
+      required: false,
     },
 
     category: {
       type: String,
       default: '',
+      required: false,
     },
 
     categoryLink: {
       type: String,
       default: '',
+      required: false,
     },
   },
 }

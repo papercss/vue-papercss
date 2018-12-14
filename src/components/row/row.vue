@@ -10,36 +10,43 @@ export default {
     right: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     center: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     edges: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     spaces: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     top: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     middle: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     bottom: {
       type: Boolean,
       default: false,
+      required: false,
     },
   },
 }

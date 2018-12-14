@@ -10,6 +10,7 @@ export default {
     fluid: {
       type: Boolean,
       default: false,
+      required: false,
     },
   },
 }

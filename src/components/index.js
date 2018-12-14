@@ -7,8 +7,6 @@ import PCol from './col';
 import PCollapsible from './collapsible';
 import PContainer from './container';
 import PFormGroup from './form-group';
-import PPopover from './popover';
-import PPre from './pre';
 import PProgress from './progress';
 import PRow from './row';
 import PTable from './table';
@@ -24,8 +22,6 @@ export {
   PCollapsible,
   PContainer,
   PFormGroup,
-  PPopover,
-  PPre,
   PProgress,
   PRow,
   PTable,

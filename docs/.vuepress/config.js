@@ -19,7 +19,15 @@ module.exports = {
       {
         title: 'Components',
         collapsable: false,
-        children: ['/components/alert/'],
+        children: [
+          '/components/alert/',
+          '/components/article/',
+          '/components/badge/',
+          '/components/button/',
+          '/components/card/',
+          '/components/col/',
+          '/components/collapsible/',
+        ],
       }
     ],
 

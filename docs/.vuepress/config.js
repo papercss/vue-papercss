@@ -9,7 +9,8 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Quick-start', link: '/quick-start/' },
-      { text: 'Components', link: '/components/' },
+      { text: 'Components', link: '/components/alert/' },
+      { text: 'Utilities', link: '/utilities/' },
       { text: 'PaperCSS', link: 'https://getpapercss.com' },
     ],
 

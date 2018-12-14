@@ -48,3 +48,17 @@ If you don't use a module bundler, you can directly import `vue-papercss` in you
 <!-- Add the vue-plugin script after your vue.js -->
 <script src="https://unpkg.com/vue-papercss/dist/vue-papercss.min.js"></script>
 ```
+
+## Build variants
+
+Choosing the best variant for your packager/build environment helps to reduce the size of the bundle. If your bundler supports modules, it will automatically prefer `es` over `commonjs`.
+
+| Variant   | Environments          | File path                   |
+| ---       | ---                   | ---                         |
+| ES Module | Webpack 2+, Rollup    | `dist/vue-papercss.esm.js`  |
+| CommonJS  | Webpack 1 / Browsers  | `dist/vue-papercss.min.js`  |
+| UMD       | Browsers              | `dist/vue-papercss.umd.js`  |
+
+::: tip
+You can access all the build variants using `unpkg`.
+:::

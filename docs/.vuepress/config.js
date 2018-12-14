@@ -13,7 +13,15 @@ module.exports = {
       { text: 'PaperCSS', link: 'https://getpapercss.com' },
     ],
 
-    sidebar: ['', '/quick-start/', '/components/'],
+    sidebar: [
+      '',
+      '/quick-start/',
+      {
+        title: 'Components',
+        collapsable: false,
+        children: ['/components/alert/'],
+      }
+    ],
 
     repo: 'papercss/vue-papercss',
     docsDir: 'docs',

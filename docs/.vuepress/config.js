@@ -27,6 +27,12 @@ module.exports = {
           '/components/card/',
           '/components/col/',
           '/components/collapsible/',
+          '/components/container/',
+          '/components/form-group/',
+          '/components/progress/',
+          '/components/row/',
+          '/components/table/',
+          '/components/tabs/',
         ],
       }
     ],

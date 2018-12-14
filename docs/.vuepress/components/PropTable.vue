@@ -60,3 +60,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+#prop-table {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  display: inline-block;
+}
+</style>

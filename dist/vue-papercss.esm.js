@@ -37,6 +37,10 @@ function registerComponent(Vue, name, definition) {
 //
 //
 //
+//
+//
+//
+//
 var script = {
   data: function data() {
     return {
@@ -46,11 +50,13 @@ var script = {
   props: {
     color: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     dismissible: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   },
   methods: {
@@ -78,7 +84,10 @@ var __vue_render__ = function() {
   return _c(
     "div",
     {
-      class: ((_obj = { alert: true }),
+      class: ((_obj = {
+        alert: true,
+        "alert-primary": !_vm.color
+      }),
       (_obj["alert-" + _vm.color] = _vm.color),
       _obj)
     },
@@ -110,11 +119,11 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-34406d5a_0", { source: "\n.alert[data-v-34406d5a] {\n  transition: all .25s ease-out;\n}\n.alert.closed[data-v-34406d5a] {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n.alert .btn-close[data-v-34406d5a] {\n  float: right;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/alert/alert.vue"],"names":[],"mappings":";AA6CA;EACA,8BAAA;CACA;AAEA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"alert.vue","sourcesContent":["<template>\n  <div :class=\"{'alert': true, ['alert-' + color]: color }\">\n    <slot />\n\n    <span v-if=\"dismissible\" class=\"btn-close\" @click=\"dismiss()\">X</span>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: true,\n    };\n  },\n\n  props: {\n    color: {\n      type: String,\n      default: '',\n    },\n\n    dismissible: {\n      type: Boolean,\n      default: false,\n    },\n  },\n\n  methods: {\n    dismiss() {\n      this.$el.className += ' closed';\n      this.displayed = false;\n    },\n\n    show() {\n      if (this.$el.classList.contains('closed')) {\n        this.$el.classList.remove('closed');\n        this.displayed = true;\n      }\n    }\n  },\n}\n</script>\n\n<style scoped>\n.alert {\n  transition: all .25s ease-out;\n}\n\n.alert.closed {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n\n.alert .btn-close {\n  float: right;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-0fd60e3c_0", { source: "\n.alert[data-v-0fd60e3c] {\n  transition: all .25s ease-out;\n}\n.alert.closed[data-v-0fd60e3c] {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n.alert .btn-close[data-v-0fd60e3c] {\n  float: right;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/alert/alert.vue"],"names":[],"mappings":";AAmDA;EACA,8BAAA;CACA;AAEA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"alert.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'alert': true,\n    'alert-primary': !color,\n    ['alert-' + color]: color,\n  }\">\n    <slot />\n\n    <span v-if=\"dismissible\" class=\"btn-close\" @click=\"dismiss()\">X</span>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: true,\n    };\n  },\n\n  props: {\n    color: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    dismissible: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    dismiss() {\n      this.$el.className += ' closed';\n      this.displayed = false;\n    },\n\n    show() {\n      if (this.$el.classList.contains('closed')) {\n        this.$el.classList.remove('closed');\n        this.displayed = true;\n      }\n    },\n  },\n}\n</script>\n\n<style scoped>\n.alert {\n  transition: all .25s ease-out;\n}\n\n.alert.closed {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n\n.alert .btn-close {\n  float: right;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-34406d5a";
+  const __vue_scope_id__ = "data-v-0fd60e3c";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */
@@ -277,39 +286,48 @@ var script$1 = {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '',
+      required: true
     },
     meta: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     lead: {
       type: String,
-      default: ''
+      default: '',
+      required: true
     },
     titleLink: {
       type: String,
-      default: ''
+      default: '',
+      required: true
     },
     author: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     authorLink: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     date: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     category: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     categoryLink: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     }
   }
 };
@@ -340,19 +358,19 @@ var __vue_render__$1 = function() {
         ? _c("p", { staticClass: "article-meta" }, [
             _vm.author && _vm.authorLink && !_vm.date && !_vm.category
               ? _c("span", [
-                  _vm._v("\n        Posted by "),
+                  _vm._v("\n      Posted by "),
                   _c("a", { attrs: { href: _vm.authorLink } }, [
                     _vm._v(_vm._s(_vm.author))
                   ]),
-                  _vm._v(".\n      ")
+                  _vm._v(".\n    ")
                 ])
               : _vm.author && _vm.authorLink && _vm.date && !_vm.category
                 ? _c("span", [
-                    _vm._v("\n        Posted by "),
+                    _vm._v("\n      Posted by "),
                     _c("a", { attrs: { href: _vm.authorLink } }, [
                       _vm._v(_vm._s(_vm.author))
                     ]),
-                    _vm._v(" on " + _vm._s(_vm.date) + ".\n      ")
+                    _vm._v(" on " + _vm._s(_vm.date) + ".\n    ")
                   ])
                 : _vm.author &&
                   _vm.authorLink &&
@@ -360,7 +378,7 @@ var __vue_render__$1 = function() {
                   _vm.category &&
                   _vm.categoryLink
                   ? _c("span", [
-                      _vm._v("\n        Posted by "),
+                      _vm._v("\n      Posted by "),
                       _c("a", { attrs: { href: _vm.authorLink } }, [
                         _vm._v(_vm._s(_vm.author))
                       ]),
@@ -388,11 +406,11 @@ __vue_render__$1._withStripped = true;
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-c5ec77b6_0", { source: "\n.article .article-meta span[data-v-c5ec77b6] {\n  margin-right: 6px;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/article/article.vue"],"names":[],"mappings":";AAgFA;EACA,kBAAA;CACA","file":"article.vue","sourcesContent":["<template>\n  <article class=\"article\">\n    <h1 class=\"article-title\">\n      <a :href=\"titleLink\" target=\"_blank\">{{title}}</a>\n    </h1>\n\n    <p v-if=\"meta\" class=\"article-meta\">{{meta}}</p>\n\n    <p v-if=\"author && authorLink\" class=\"article-meta\">\n      <span v-if=\"author && authorLink && !date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a>.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}}.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && category && categoryLink\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}} in category <a :href=\"categoryLink\">{{category}}</a>\n      </span>\n    </p>\n\n    <p v-if=\"lead\" class=\"text-lead\">{{lead}}</p>\n\n    <slot />\n  </article>\n</template>\n\n<script>\nexport default {\n  props: {\n    title: {\n      type: String,\n      default: '',\n    },\n\n    meta: {\n      type: String,\n      default: '',\n    },\n\n    lead: {\n      type: String,\n      default: '',\n    },\n\n    titleLink: {\n      type: String,\n      default: '',\n    },\n\n    author: {\n      type: String,\n      default: '',\n    },\n\n    authorLink: {\n      type: String,\n      default: '',\n    },\n\n    date: {\n      type: String,\n      default: '',\n    },\n\n    category: {\n      type: String,\n      default: '',\n    },\n\n    categoryLink: {\n      type: String,\n      default: '',\n    },\n  },\n}\n</script>\n\n<style scoped>\n.article .article-meta span {\n  margin-right: 6px;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-f87cf2b8_0", { source: "\n.article .article-meta span[data-v-f87cf2b8] {\n  margin-right: 6px;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/article/article.vue"],"names":[],"mappings":";AAyFA;EACA,kBAAA;CACA","file":"article.vue","sourcesContent":["<template>\n  <article class=\"article\">\n    <h1 class=\"article-title\">\n      <a :href=\"titleLink\" target=\"_blank\">{{title}}</a>\n    </h1>\n\n    <p v-if=\"meta\" class=\"article-meta\">{{meta}}</p>\n\n    <p v-if=\"author && authorLink\" class=\"article-meta\">\n      <span v-if=\"author && authorLink && !date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a>.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}}.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && category && categoryLink\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}} in category <a :href=\"categoryLink\">{{category}}</a>\n      </span>\n    </p>\n\n    <p v-if=\"lead\" class=\"text-lead\">{{lead}}</p>\n\n    <slot />\n  </article>\n</template>\n\n<script>\nexport default {\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    meta: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    lead: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    titleLink: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    author: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    authorLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    date: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    category: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    categoryLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n  },\n}\n</script>\n\n<style scoped>\n.article .article-meta span {\n  margin-right: 6px;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$1 = "data-v-c5ec77b6";
+  const __vue_scope_id__$1 = "data-v-f87cf2b8";
   /* module identifier */
   const __vue_module_identifier__$1 = undefined;
   /* functional template */
@@ -534,7 +552,8 @@ var script$2 = {
   props: {
     color: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     }
   }
 };
@@ -619,31 +638,51 @@ vueUse(BadgePlugin);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$3 = {
   props: {
     block: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     small: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     large: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     color: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     href: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     }
   }
 };
@@ -664,13 +703,18 @@ var __vue_render__$3 = function() {
         "btn-block": _vm.block,
         "btn-small": _vm.small,
         "btn-large": _vm.large,
-        disabled: _vm.disabled
+        disabled: _vm.disabled,
+        "btn-primary": !_vm.color
       }),
       (_obj["btn-" + _vm.color] = _vm.color),
       _obj),
       attrs: { disabled: _vm.disabled }
     },
-    [_c("a", { attrs: { href: _vm.href } }, [_vm._t("default")], 2)]
+    [
+      _vm.href
+        ? _c("a", { attrs: { href: _vm.href } }, [_vm._t("default")], 2)
+        : _c("div", [_vm._t("default")], 2)
+    ]
   )
   var _obj;
 };
@@ -678,9 +722,13 @@ var __vue_staticRenderFns__$3 = [];
 __vue_render__$3._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$3 = undefined;
+  const __vue_inject_styles__$3 = function (inject) {
+    if (!inject) return
+    inject("data-v-44fbd948_0", { source: "\n.paper-btn a[data-v-44fbd948] {\n  background-image: none;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/button/button.vue"],"names":[],"mappings":";AA+DA;EACA,uBAAA;CACA","file":"button.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'paper-btn': true,\n    'btn-block': block,\n    'btn-small': small,\n    'btn-large': large,\n    'disabled': disabled,\n    'btn-primary': !color,\n    ['btn-' + color]: color,\n  }\" :disabled=\"disabled\">\n    <a v-if=\"href\" :href=\"href\">\n      <slot />\n    </a>\n\n    <div v-else>\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n\tprops: {\n\t\tblock: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n\t\tsmall: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    large: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n\n\t\tdisabled: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    color: {\n\t\t  type: String,\n      default: '',\n      required: false,\n    },\n\n\t\thref: {\n\t\t\ttype: String,\n      default: '',\n      required: false,\n\t\t}\n\t}\n}\n</script>\n\n<style scoped>\n.paper-btn a {\n  background-image: none;\n}\n</style>\n"]}, media: undefined });
+
+  };
   /* scoped */
-  const __vue_scope_id__$3 = undefined;
+  const __vue_scope_id__$3 = "data-v-44fbd948";
   /* module identifier */
   const __vue_module_identifier__$3 = undefined;
   /* functional template */
@@ -706,10 +754,89 @@ __vue_render__$3._withStripped = true;
 
     component._scopeId = scope;
 
+    {
+      let hook;
+      if (style) {
+        hook = function(context) {
+          style.call(this, createInjector(context));
+        };
+      }
+
+      if (hook !== undefined) {
+        if (component.functional) {
+          // register for functional component in vue file
+          const originalRender = component.render;
+          component.render = function renderWithStyleInjection(h, context) {
+            hook.call(context);
+            return originalRender(h, context)
+          };
+        } else {
+          // inject component registration as beforeCreate hook
+          const existing = component.beforeCreate;
+          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+      }
+    }
+
     return component
   }
   /* style inject */
-  
+  function __vue_create_injector__$2() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const styles = __vue_create_injector__$2.styles || (__vue_create_injector__$2.styles = {});
+    const isOldIE =
+      typeof navigator !== 'undefined' &&
+      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+
+    return function addStyle(id, css) {
+      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
+
+      const group = isOldIE ? css.media || 'default' : id;
+      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
+
+      if (!style.ids.includes(id)) {
+        let code = css.source;
+        let index = style.ids.length;
+
+        style.ids.push(id);
+
+        if (isOldIE) {
+          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
+        }
+
+        if (!style.element) {
+          const el = style.element = document.createElement('style');
+          el.type = 'text/css';
+
+          if (css.media) el.setAttribute('media', css.media);
+          if (isOldIE) {
+            el.setAttribute('data-group', group);
+            el.setAttribute('data-next-index', '0');
+          }
+
+          head.appendChild(el);
+        }
+
+        if (isOldIE) {
+          index = parseInt(style.element.getAttribute('data-next-index'));
+          style.element.setAttribute('data-next-index', index + 1);
+        }
+
+        if (style.element.styleSheet) {
+          style.parts.push(code);
+          style.element.styleSheet.cssText = style.parts
+            .filter(Boolean)
+            .join('\n');
+        } else {
+          const textNode = document.createTextNode(code);
+          const nodes = style.element.childNodes;
+          if (nodes[index]) style.element.removeChild(nodes[index]);
+          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
+          else style.element.appendChild(textNode);
+        }
+      }
+    }
+  }
   /* style inject SSR */
   
 
@@ -721,7 +848,7 @@ __vue_render__$3._withStripped = true;
     __vue_scope_id__$3,
     __vue_is_functional_template__$3,
     __vue_module_identifier__$3,
-    undefined,
+    __vue_create_injector__$2,
     undefined
   );
 
@@ -755,35 +882,43 @@ var script$4 = {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     subtitle: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     text: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     imgSrc: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     imgAlt: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     imgBottom: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     header: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     },
     footer: {
       type: String,
-      default: ''
+      default: '',
+      required: false
     }
   }
 };
@@ -915,35 +1050,43 @@ var script$5 = {
   props: {
     col: {
       type: String,
-      default: null
+      default: null,
+      required: false
     },
     lg: {
       type: String,
-      default: null
+      default: null,
+      required: false
     },
     md: {
       type: String,
-      default: null
+      default: null,
+      required: false
     },
     sm: {
       type: String,
-      default: null
+      default: null,
+      required: false
     },
     fill: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     bottom: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     middle: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     top: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   },
   computed: {}
@@ -1053,11 +1196,13 @@ var script$6 = {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '',
+      required: true
     },
     show: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   },
   methods: {
@@ -1103,11 +1248,11 @@ __vue_render__$6._withStripped = true;
   /* style */
   const __vue_inject_styles__$6 = function (inject) {
     if (!inject) return
-    inject("data-v-789410a0_0", { source: "\n.collapsible .collapsible-title[data-v-789410a0] {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n.collapsible .collapsible-body[data-v-789410a0] {\n  opacity: 1;\n  max-height: 960px;\n}\n.collapsible .collapsible-body.hide[data-v-789410a0] {\n  max-height: 0;\n  opacity: 0;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/collapsible/collapsible.vue"],"names":[],"mappings":";AAuCA;EACA,iCAAA;EACA,eAAA;EACA,sBAAA;EACA,iBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,WAAA;EACA,kBAAA;CACA;AAEA;EACA,cAAA;EACA,WAAA;CACA","file":"collapsible.vue","sourcesContent":["<template>\n  <div class=\"collapsible\">\n    <span class=\"collapsible-title\" @click=\"toggle()\">{{title}}</span>\n\n    <div class=\"collapsible-body\" :class=\"{ 'hide': !display }\">\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      display: this.show,\n    };\n  },\n\n  props: {\n    title: {\n      type: String,\n      default: '',\n    },\n\n    show: {\n      type: Boolean,\n      default: false,\n    },\n  },\n\n  methods: {\n    toggle() {\n      this.display = !this.display;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.collapsible .collapsible-title {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n\n.collapsible .collapsible-body {\n  opacity: 1;\n  max-height: 960px;\n}\n\n.collapsible .collapsible-body.hide {\n  max-height: 0;\n  opacity: 0;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-61628a27_0", { source: "\n.collapsible .collapsible-title[data-v-61628a27] {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n.collapsible .collapsible-body[data-v-61628a27] {\n  opacity: 1;\n  max-height: 960px;\n}\n.collapsible .collapsible-body.hide[data-v-61628a27] {\n  max-height: 0;\n  opacity: 0;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/collapsible/collapsible.vue"],"names":[],"mappings":";AAyCA;EACA,iCAAA;EACA,eAAA;EACA,sBAAA;EACA,iBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,WAAA;EACA,kBAAA;CACA;AAEA;EACA,cAAA;EACA,WAAA;CACA","file":"collapsible.vue","sourcesContent":["<template>\n  <div class=\"collapsible\">\n    <span class=\"collapsible-title\" @click=\"toggle()\">{{title}}</span>\n\n    <div class=\"collapsible-body\" :class=\"{ 'hide': !display }\">\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      display: this.show,\n    };\n  },\n\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    show: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    toggle() {\n      this.display = !this.display;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.collapsible .collapsible-title {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n\n.collapsible .collapsible-body {\n  opacity: 1;\n  max-height: 960px;\n}\n\n.collapsible .collapsible-body.hide {\n  max-height: 0;\n  opacity: 0;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$6 = "data-v-789410a0";
+  const __vue_scope_id__$6 = "data-v-61628a27";
   /* module identifier */
   const __vue_module_identifier__$6 = undefined;
   /* functional template */
@@ -1160,9 +1305,9 @@ __vue_render__$6._withStripped = true;
     return component
   }
   /* style inject */
-  function __vue_create_injector__$2() {
+  function __vue_create_injector__$3() {
     const head = document.head || document.getElementsByTagName('head')[0];
-    const styles = __vue_create_injector__$2.styles || (__vue_create_injector__$2.styles = {});
+    const styles = __vue_create_injector__$3.styles || (__vue_create_injector__$3.styles = {});
     const isOldIE =
       typeof navigator !== 'undefined' &&
       /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
@@ -1227,7 +1372,7 @@ __vue_render__$6._withStripped = true;
     __vue_scope_id__$6,
     __vue_is_functional_template__$6,
     __vue_module_identifier__$6,
-    __vue_create_injector__$2,
+    __vue_create_injector__$3,
     undefined
   );
 
@@ -1248,7 +1393,8 @@ var script$7 = {
   props: {
     fluid: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   }
 };
@@ -1416,22 +1562,27 @@ vueUse(FormGroupPlugin);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var script$9 = {
-  name: "popover",
   props: {
-    position: {
-      type: String,
-      default: 'top'
+    width: {
+      type: Number,
+      value: 0,
+      required: true
     },
-    text: {
+    color: {
       type: String,
-      default: ''
+      value: '',
+      required: false
+    },
+    label: {
+      type: String | undefined,
+      value: undefined,
+      required: false
+    },
+    striped: {
+      type: Boolean,
+      value: false,
+      required: false
     }
   }
 };
@@ -1441,235 +1592,6 @@ var script$9 = {
             
 /* template */
 var __vue_render__$9 = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { staticStyle: { display: "inline-block" } }, [
-    _vm.position == "top"
-      ? _c(
-          "div",
-          {
-            staticStyle: { margin: "0", padding: "0" },
-            attrs: { "popover-top": _vm.text }
-          },
-          [_vm._t("default")],
-          2
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.position == "left"
-      ? _c(
-          "div",
-          {
-            staticStyle: { margin: "0", padding: "0" },
-            attrs: { "popover-left": _vm.text }
-          },
-          [_vm._t("default")],
-          2
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.position == "right"
-      ? _c(
-          "div",
-          {
-            staticStyle: { margin: "0", padding: "0" },
-            attrs: { "popover-right": _vm.text }
-          },
-          [_vm._t("default")],
-          2
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.position == "bottom"
-      ? _c(
-          "div",
-          {
-            staticStyle: { margin: "0", padding: "0" },
-            attrs: { "popover-bottom": _vm.text }
-          },
-          [_vm._t("default")],
-          2
-        )
-      : _vm._e()
-  ])
-};
-var __vue_staticRenderFns__$9 = [];
-__vue_render__$9._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$9 = undefined;
-  /* scoped */
-  const __vue_scope_id__$9 = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$9 = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$9 = false;
-  /* component normalizer */
-  function __vue_normalize__$9(
-    template, style, script,
-    scope, functional, moduleIdentifier,
-    createInjector, createInjectorSSR
-  ) {
-    const component = (typeof script === 'function' ? script.options : script) || {};
-
-    // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/popover/popover.vue";
-
-    if (!component.render) {
-      component.render = template.render;
-      component.staticRenderFns = template.staticRenderFns;
-      component._compiled = true;
-
-      if (functional) component.functional = true;
-    }
-
-    component._scopeId = scope;
-
-    return component
-  }
-  /* style inject */
-  
-  /* style inject SSR */
-  
-
-  
-  var popover = __vue_normalize__$9(
-    { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$9 },
-    __vue_inject_styles__$9,
-    __vue_script__$9,
-    __vue_scope_id__$9,
-    __vue_is_functional_template__$9,
-    __vue_module_identifier__$9,
-    undefined,
-    undefined
-  );
-
-var PopoverPlugin = {
-  install: function install(Vue) {
-    registerComponent(Vue, 'PPopover', popover);
-  }
-};
-vueUse(PopoverPlugin);
-
-//
-//
-//
-//
-//
-//
-var script$a = {
-  name: "pre"
-};
-
-/* script */
-            const __vue_script__$a = script$a;
-            
-/* template */
-var __vue_render__$a = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("pre", [_vm._v("    "), _vm._t("default"), _vm._v("\n  ")], 2)
-};
-var __vue_staticRenderFns__$a = [];
-__vue_render__$a._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$a = undefined;
-  /* scoped */
-  const __vue_scope_id__$a = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$a = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$a = false;
-  /* component normalizer */
-  function __vue_normalize__$a(
-    template, style, script,
-    scope, functional, moduleIdentifier,
-    createInjector, createInjectorSSR
-  ) {
-    const component = (typeof script === 'function' ? script.options : script) || {};
-
-    // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/pre/pre.vue";
-
-    if (!component.render) {
-      component.render = template.render;
-      component.staticRenderFns = template.staticRenderFns;
-      component._compiled = true;
-
-      if (functional) component.functional = true;
-    }
-
-    component._scopeId = scope;
-
-    return component
-  }
-  /* style inject */
-  
-  /* style inject SSR */
-  
-
-  
-  var pre = __vue_normalize__$a(
-    { render: __vue_render__$a, staticRenderFns: __vue_staticRenderFns__$a },
-    __vue_inject_styles__$a,
-    __vue_script__$a,
-    __vue_scope_id__$a,
-    __vue_is_functional_template__$a,
-    __vue_module_identifier__$a,
-    undefined,
-    undefined
-  );
-
-var PrePlugin = {
-  install: function install(Vue) {
-    registerComponent(Vue, 'PPre', pre);
-  }
-};
-vueUse(PrePlugin);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var script$b = {
-  props: {
-    width: {
-      type: Number,
-      value: 0
-    },
-    color: {
-      type: String,
-      value: ''
-    },
-    label: {
-      type: String | undefined,
-      value: undefined
-    },
-    striped: {
-      type: Boolean,
-      value: false
-    }
-  }
-};
-
-/* script */
-            const __vue_script__$b = script$b;
-            
-/* template */
-var __vue_render__$b = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1691,19 +1613,19 @@ var __vue_render__$b = function() {
     )
   ])
 };
-var __vue_staticRenderFns__$b = [];
-__vue_render__$b._withStripped = true;
+var __vue_staticRenderFns__$9 = [];
+__vue_render__$9._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$b = undefined;
+  const __vue_inject_styles__$9 = undefined;
   /* scoped */
-  const __vue_scope_id__$b = undefined;
+  const __vue_scope_id__$9 = undefined;
   /* module identifier */
-  const __vue_module_identifier__$b = undefined;
+  const __vue_module_identifier__$9 = undefined;
   /* functional template */
-  const __vue_is_functional_template__$b = false;
+  const __vue_is_functional_template__$9 = false;
   /* component normalizer */
-  function __vue_normalize__$b(
+  function __vue_normalize__$9(
     template, style, script,
     scope, functional, moduleIdentifier,
     createInjector, createInjectorSSR
@@ -1731,13 +1653,13 @@ __vue_render__$b._withStripped = true;
   
 
   
-  var progress = __vue_normalize__$b(
-    { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$b },
-    __vue_inject_styles__$b,
-    __vue_script__$b,
-    __vue_scope_id__$b,
-    __vue_is_functional_template__$b,
-    __vue_module_identifier__$b,
+  var progress = __vue_normalize__$9(
+    { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$9 },
+    __vue_inject_styles__$9,
+    __vue_script__$9,
+    __vue_scope_id__$9,
+    __vue_is_functional_template__$9,
+    __vue_module_identifier__$9,
     undefined,
     undefined
   );
@@ -1755,44 +1677,51 @@ vueUse(ProgressPlugin);
 //
 //
 //
-var script$c = {
+var script$a = {
   props: {
     right: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     center: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     edges: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     spaces: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     top: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     middle: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     bottom: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   }
 };
 
 /* script */
-            const __vue_script__$c = script$c;
+            const __vue_script__$a = script$a;
             
 /* template */
-var __vue_render__$c = function() {
+var __vue_render__$a = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1814,19 +1743,19 @@ var __vue_render__$c = function() {
     2
   )
 };
-var __vue_staticRenderFns__$c = [];
-__vue_render__$c._withStripped = true;
+var __vue_staticRenderFns__$a = [];
+__vue_render__$a._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$c = undefined;
+  const __vue_inject_styles__$a = undefined;
   /* scoped */
-  const __vue_scope_id__$c = undefined;
+  const __vue_scope_id__$a = undefined;
   /* module identifier */
-  const __vue_module_identifier__$c = undefined;
+  const __vue_module_identifier__$a = undefined;
   /* functional template */
-  const __vue_is_functional_template__$c = false;
+  const __vue_is_functional_template__$a = false;
   /* component normalizer */
-  function __vue_normalize__$c(
+  function __vue_normalize__$a(
     template, style, script,
     scope, functional, moduleIdentifier,
     createInjector, createInjectorSSR
@@ -1854,13 +1783,13 @@ __vue_render__$c._withStripped = true;
   
 
   
-  var row = __vue_normalize__$c(
-    { render: __vue_render__$c, staticRenderFns: __vue_staticRenderFns__$c },
-    __vue_inject_styles__$c,
-    __vue_script__$c,
-    __vue_scope_id__$c,
-    __vue_is_functional_template__$c,
-    __vue_module_identifier__$c,
+  var row = __vue_normalize__$a(
+    { render: __vue_render__$a, staticRenderFns: __vue_staticRenderFns__$a },
+    __vue_inject_styles__$a,
+    __vue_script__$a,
+    __vue_scope_id__$a,
+    __vue_is_functional_template__$a,
+    __vue_module_identifier__$a,
     undefined,
     undefined
   );
@@ -1878,25 +1807,27 @@ vueUse(RowPlugin);
 //
 //
 //
-var script$d = {
-  name: "table",
+var script$b = {
+  name: 'table',
   props: {
     alternating: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     },
     hover: {
       type: Boolean,
-      default: false
+      default: false,
+      required: false
     }
   }
 };
 
 /* script */
-            const __vue_script__$d = script$d;
+            const __vue_script__$b = script$b;
             
 /* template */
-var __vue_render__$d = function() {
+var __vue_render__$b = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1909,19 +1840,19 @@ var __vue_render__$d = function() {
     2
   )
 };
-var __vue_staticRenderFns__$d = [];
-__vue_render__$d._withStripped = true;
+var __vue_staticRenderFns__$b = [];
+__vue_render__$b._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$d = undefined;
+  const __vue_inject_styles__$b = undefined;
   /* scoped */
-  const __vue_scope_id__$d = undefined;
+  const __vue_scope_id__$b = undefined;
   /* module identifier */
-  const __vue_module_identifier__$d = undefined;
+  const __vue_module_identifier__$b = undefined;
   /* functional template */
-  const __vue_is_functional_template__$d = false;
+  const __vue_is_functional_template__$b = false;
   /* component normalizer */
-  function __vue_normalize__$d(
+  function __vue_normalize__$b(
     template, style, script,
     scope, functional, moduleIdentifier,
     createInjector, createInjectorSSR
@@ -1949,13 +1880,13 @@ __vue_render__$d._withStripped = true;
   
 
   
-  var table = __vue_normalize__$d(
-    { render: __vue_render__$d, staticRenderFns: __vue_staticRenderFns__$d },
-    __vue_inject_styles__$d,
-    __vue_script__$d,
-    __vue_scope_id__$d,
-    __vue_is_functional_template__$d,
-    __vue_module_identifier__$d,
+  var table = __vue_normalize__$b(
+    { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$b },
+    __vue_inject_styles__$b,
+    __vue_script__$b,
+    __vue_scope_id__$b,
+    __vue_is_functional_template__$b,
+    __vue_module_identifier__$b,
     undefined,
     undefined
   );
@@ -1979,7 +1910,7 @@ vueUse(TablePlugin);
 //
 //
 //
-var script$e = {
+var script$c = {
   beforeMount: function beforeMount() {
     var _this = this;
 
@@ -2029,10 +1960,10 @@ var script$e = {
 };
 
 /* script */
-            const __vue_script__$e = script$e;
+            const __vue_script__$c = script$c;
             
 /* template */
-var __vue_render__$e = function() {
+var __vue_render__$c = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2064,7 +1995,8 @@ var __vue_render__$e = function() {
               )
             ]
           )
-        })
+        }),
+        0
       ),
       _vm._v(" "),
       _vm._t("default")
@@ -2072,23 +2004,23 @@ var __vue_render__$e = function() {
     2
   )
 };
-var __vue_staticRenderFns__$e = [];
-__vue_render__$e._withStripped = true;
+var __vue_staticRenderFns__$c = [];
+__vue_render__$c._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$e = function (inject) {
+  const __vue_inject_styles__$c = function (inject) {
     if (!inject) return
     inject("data-v-ecbafc9e_0", { source: "\n.tabs ul[data-v-ecbafc9e] {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n.tabs li[data-v-ecbafc9e] {\n  float: left;\n  text-indent: unset;\n}\n.tabs li[data-v-ecbafc9e]::before {\n  content: none;\n}\n.tabs li a[data-v-ecbafc9e] {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n.tabs li a.active[data-v-ecbafc9e] {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n.tabs li a[data-v-ecbafc9e]:not(.active):hover {\n  color: #868e96;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tabs.vue"],"names":[],"mappings":";AAgEA;EACA,cAAA;EACA,oBAAA;EACA,8BAAA;EACA,sBAAA;EACA,kBAAA;EACA,WAAA;EACA,iBAAA;CACA;AAEA;EACA,YAAA;EACA,mBAAA;CACA;AAEA;EACA,cAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,mBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,iCAAA;CACA;AAEA;EACA,eAAA;CACA","file":"tabs.vue","sourcesContent":["<template>\n  <div class=\"tabs\">\n    <ul>\n      <li v-for=\"(tabNode, index) in tabNodes\" :key=\"'tab-' + index\" @click=\"changeTab(index)\">\n        <a href=\"#\" :class=\"{ 'active': selectedTabIndex === index }\">{{tabNames[index]}}</a>\n      </li>\n    </ul>\n\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  beforeMount() {\n    // Find only `PTab` components and store the `VNode` and tab-name.\n    this.$slots['default'].forEach((vnode) => {\n      if (vnode.componentOptions.tag === 'p-tab') {\n        const tabName = vnode.data.attrs['title'];\n\n        this.tabNodes.push(vnode);\n        this.tabNames.push(tabName);\n      }\n    });\n  },\n\n  mounted() {\n    // Automatically show the first tab if it is present\n    if (this.tabNodes.length > 0 && this.tabNodes[0]) {\n      this.tabNodes[0].componentInstance.showTab();\n    }\n  },\n\n  data() {\n    return {\n      selectedTabIndex: 0,\n      /** @type Vue.VNode[] */\n      tabNodes: [],\n      /** @type String[] */\n      tabNames: [],\n    };\n  },\n\n  methods: {\n    /**\n     * Change the tab by calling the `hideTab` and `showTab` method on the\n     * `PTab` component.\n     *\n     * @param {number} index index of the new tab to display\n     */\n    changeTab(index) {\n      const currentTabVnode = this.tabNodes[this.selectedTabIndex];\n      const newTabVnode = this.tabNodes[index];\n\n      currentTabVnode.componentInstance.hideTab();\n      newTabVnode.componentInstance.showTab();\n\n      this.selectedTabIndex = index;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.tabs ul {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n\n.tabs li {\n  float: left;\n  text-indent: unset;\n}\n\n.tabs li::before {\n  content: none;\n}\n\n.tabs li a {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n\n.tabs li a.active {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n\n.tabs li a:not(.active):hover {\n  color: #868e96;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$e = "data-v-ecbafc9e";
+  const __vue_scope_id__$c = "data-v-ecbafc9e";
   /* module identifier */
-  const __vue_module_identifier__$e = undefined;
+  const __vue_module_identifier__$c = undefined;
   /* functional template */
-  const __vue_is_functional_template__$e = false;
+  const __vue_is_functional_template__$c = false;
   /* component normalizer */
-  function __vue_normalize__$e(
+  function __vue_normalize__$c(
     template, style, script,
     scope, functional, moduleIdentifier,
     createInjector, createInjectorSSR
@@ -2097,177 +2029,6 @@ __vue_render__$e._withStripped = true;
 
     // For security concerns, we use only base name in production mode.
     component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tabs.vue";
-
-    if (!component.render) {
-      component.render = template.render;
-      component.staticRenderFns = template.staticRenderFns;
-      component._compiled = true;
-
-      if (functional) component.functional = true;
-    }
-
-    component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
-
-    return component
-  }
-  /* style inject */
-  function __vue_create_injector__$3() {
-    const head = document.head || document.getElementsByTagName('head')[0];
-    const styles = __vue_create_injector__$3.styles || (__vue_create_injector__$3.styles = {});
-    const isOldIE =
-      typeof navigator !== 'undefined' &&
-      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
-
-    return function addStyle(id, css) {
-      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
-
-      const group = isOldIE ? css.media || 'default' : id;
-      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
-
-      if (!style.ids.includes(id)) {
-        let code = css.source;
-        let index = style.ids.length;
-
-        style.ids.push(id);
-
-        if (isOldIE) {
-          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
-        }
-
-        if (!style.element) {
-          const el = style.element = document.createElement('style');
-          el.type = 'text/css';
-
-          if (css.media) el.setAttribute('media', css.media);
-          if (isOldIE) {
-            el.setAttribute('data-group', group);
-            el.setAttribute('data-next-index', '0');
-          }
-
-          head.appendChild(el);
-        }
-
-        if (isOldIE) {
-          index = parseInt(style.element.getAttribute('data-next-index'));
-          style.element.setAttribute('data-next-index', index + 1);
-        }
-
-        if (style.element.styleSheet) {
-          style.parts.push(code);
-          style.element.styleSheet.cssText = style.parts
-            .filter(Boolean)
-            .join('\n');
-        } else {
-          const textNode = document.createTextNode(code);
-          const nodes = style.element.childNodes;
-          if (nodes[index]) style.element.removeChild(nodes[index]);
-          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
-          else style.element.appendChild(textNode);
-        }
-      }
-    }
-  }
-  /* style inject SSR */
-  
-
-  
-  var tabs = __vue_normalize__$e(
-    { render: __vue_render__$e, staticRenderFns: __vue_staticRenderFns__$e },
-    __vue_inject_styles__$e,
-    __vue_script__$e,
-    __vue_scope_id__$e,
-    __vue_is_functional_template__$e,
-    __vue_module_identifier__$e,
-    __vue_create_injector__$3,
-    undefined
-  );
-
-//
-//
-//
-//
-//
-//
-var script$f = {
-  data: function data() {
-    return {
-      displayed: false
-    };
-  },
-  methods: {
-    hideTab: function hideTab() {
-      this.displayed = false;
-    },
-    showTab: function showTab() {
-      this.displayed = true;
-    }
-  }
-};
-
-/* script */
-            const __vue_script__$f = script$f;
-            
-/* template */
-var __vue_render__$f = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c(
-    "div",
-    { staticClass: "content", class: { show: _vm.displayed } },
-    [_vm._t("default")],
-    2
-  )
-};
-var __vue_staticRenderFns__$f = [];
-__vue_render__$f._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$f = function (inject) {
-    if (!inject) return
-    inject("data-v-e137ae22_0", { source: "\n.content.show[data-v-e137ae22] {\n  display: block;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue"],"names":[],"mappings":";AA2BA;EACA,eAAA;CACA","file":"tab.vue","sourcesContent":["<template>\n  <div class=\"content\" :class=\"{ 'show': displayed }\">\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: false,\n    };\n  },\n\n  methods: {\n    hideTab() {\n      this.displayed = false;\n    },\n\n    showTab() {\n      this.displayed = true;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.content.show {\n  display: block;\n}\n</style>\n"]}, media: undefined });
-
-  };
-  /* scoped */
-  const __vue_scope_id__$f = "data-v-e137ae22";
-  /* module identifier */
-  const __vue_module_identifier__$f = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$f = false;
-  /* component normalizer */
-  function __vue_normalize__$f(
-    template, style, script,
-    scope, functional, moduleIdentifier,
-    createInjector, createInjectorSSR
-  ) {
-    const component = (typeof script === 'function' ? script.options : script) || {};
-
-    // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -2366,14 +2127,185 @@ __vue_render__$f._withStripped = true;
   
 
   
-  var tab = __vue_normalize__$f(
-    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$f },
-    __vue_inject_styles__$f,
-    __vue_script__$f,
-    __vue_scope_id__$f,
-    __vue_is_functional_template__$f,
-    __vue_module_identifier__$f,
+  var tabs = __vue_normalize__$c(
+    { render: __vue_render__$c, staticRenderFns: __vue_staticRenderFns__$c },
+    __vue_inject_styles__$c,
+    __vue_script__$c,
+    __vue_scope_id__$c,
+    __vue_is_functional_template__$c,
+    __vue_module_identifier__$c,
     __vue_create_injector__$4,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+var script$d = {
+  data: function data() {
+    return {
+      displayed: false
+    };
+  },
+  methods: {
+    hideTab: function hideTab() {
+      this.displayed = false;
+    },
+    showTab: function showTab() {
+      this.displayed = true;
+    }
+  }
+};
+
+/* script */
+            const __vue_script__$d = script$d;
+            
+/* template */
+var __vue_render__$d = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    { staticClass: "content", class: { show: _vm.displayed } },
+    [_vm._t("default")],
+    2
+  )
+};
+var __vue_staticRenderFns__$d = [];
+__vue_render__$d._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$d = function (inject) {
+    if (!inject) return
+    inject("data-v-e137ae22_0", { source: "\n.content.show[data-v-e137ae22] {\n  display: block;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue"],"names":[],"mappings":";AA2BA;EACA,eAAA;CACA","file":"tab.vue","sourcesContent":["<template>\n  <div class=\"content\" :class=\"{ 'show': displayed }\">\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: false,\n    };\n  },\n\n  methods: {\n    hideTab() {\n      this.displayed = false;\n    },\n\n    showTab() {\n      this.displayed = true;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.content.show {\n  display: block;\n}\n</style>\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  const __vue_scope_id__$d = "data-v-e137ae22";
+  /* module identifier */
+  const __vue_module_identifier__$d = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$d = false;
+  /* component normalizer */
+  function __vue_normalize__$d(
+    template, style, script,
+    scope, functional, moduleIdentifier,
+    createInjector, createInjectorSSR
+  ) {
+    const component = (typeof script === 'function' ? script.options : script) || {};
+
+    // For security concerns, we use only base name in production mode.
+    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue";
+
+    if (!component.render) {
+      component.render = template.render;
+      component.staticRenderFns = template.staticRenderFns;
+      component._compiled = true;
+
+      if (functional) component.functional = true;
+    }
+
+    component._scopeId = scope;
+
+    {
+      let hook;
+      if (style) {
+        hook = function(context) {
+          style.call(this, createInjector(context));
+        };
+      }
+
+      if (hook !== undefined) {
+        if (component.functional) {
+          // register for functional component in vue file
+          const originalRender = component.render;
+          component.render = function renderWithStyleInjection(h, context) {
+            hook.call(context);
+            return originalRender(h, context)
+          };
+        } else {
+          // inject component registration as beforeCreate hook
+          const existing = component.beforeCreate;
+          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+      }
+    }
+
+    return component
+  }
+  /* style inject */
+  function __vue_create_injector__$5() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const styles = __vue_create_injector__$5.styles || (__vue_create_injector__$5.styles = {});
+    const isOldIE =
+      typeof navigator !== 'undefined' &&
+      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+
+    return function addStyle(id, css) {
+      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
+
+      const group = isOldIE ? css.media || 'default' : id;
+      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
+
+      if (!style.ids.includes(id)) {
+        let code = css.source;
+        let index = style.ids.length;
+
+        style.ids.push(id);
+
+        if (isOldIE) {
+          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
+        }
+
+        if (!style.element) {
+          const el = style.element = document.createElement('style');
+          el.type = 'text/css';
+
+          if (css.media) el.setAttribute('media', css.media);
+          if (isOldIE) {
+            el.setAttribute('data-group', group);
+            el.setAttribute('data-next-index', '0');
+          }
+
+          head.appendChild(el);
+        }
+
+        if (isOldIE) {
+          index = parseInt(style.element.getAttribute('data-next-index'));
+          style.element.setAttribute('data-next-index', index + 1);
+        }
+
+        if (style.element.styleSheet) {
+          style.parts.push(code);
+          style.element.styleSheet.cssText = style.parts
+            .filter(Boolean)
+            .join('\n');
+        } else {
+          const textNode = document.createTextNode(code);
+          const nodes = style.element.childNodes;
+          if (nodes[index]) style.element.removeChild(nodes[index]);
+          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
+          else style.element.appendChild(textNode);
+        }
+      }
+    }
+  }
+  /* style inject SSR */
+  
+
+  
+  var tab = __vue_normalize__$d(
+    { render: __vue_render__$d, staticRenderFns: __vue_staticRenderFns__$d },
+    __vue_inject_styles__$d,
+    __vue_script__$d,
+    __vue_scope_id__$d,
+    __vue_is_functional_template__$d,
+    __vue_module_identifier__$d,
+    __vue_create_injector__$5,
     undefined
   );
 
@@ -2402,8 +2334,6 @@ var components = /*#__PURE__*/Object.freeze({
   PCollapsible: CollabsiblePlugin,
   PContainer: ContainerPlugin,
   PFormGroup: FormGroupPlugin,
-  PPopover: PopoverPlugin,
-  PPre: PrePlugin,
   PProgress: ProgressPlugin,
   PRow: RowPlugin,
   PTable: TablePlugin,

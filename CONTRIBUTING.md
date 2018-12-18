@@ -1,57 +1,54 @@
 # Contributing
 
-This project is open source and contributions are welcomed. It is also fairly beginner friendly, so don't be afraid to jump in if you've never contributed to a Git project before! Feel free to open an issue or contact us on [slack][slack] if you are new and need help with the process.
+This project is open source and contributions are welcomed.
 
-## Development Environment
+## Development environment
 
- * [Git][git]
- * [NodeJS][nodejs]
- * NPM package manager ([NPM][nodejs] or [Yarn][yarn])
- 
+* [Git][git]
+* [Node.js][nodejs]
+* [Yarn][yarn]
+
 ## Setting up the project
 
-### Downloading the Source Code
+### Installing dependencies
 
- 1. Fork the project to your github account.
- 1. From terminal, navigate to where you want to store the project.
- 2. Clone the forked project.
+Before you begin, make sure that you have all of the projects (dev-)dependencies installed.
 
-### Installing Dependencies
+1. From terminal, navigate to the project folder.
+2. Install dependencies with `yarn` in both the root project folder and in `/demo/` folder.
 
-Before you begin to code, make sure that you have all of the projects decencies installed.
+## Adding a new component
 
- 1. From terminal, navigate to the project folder.
- 2. Install NPM dependencies with your NPM package manager.
- 
- * *Node*: `npm install`
- * *Yarn*: `yarn`
- 
-### Setting Upstream
+1. Start the demo environment with `yarn demo:dev`. The demo environment is made for testing purposes and is not showcased on the repo, it's like a sandbox for creating/experimenting with `vue-papercss`.
+2. Add the new component inside `/src/components/`. Make sure to export it correctly as it will automatically installs itself as a global Vue component.
+3. Add the docs for the new component, see below on how to contribute on the docs.
 
- To keep your forked version of the project up to date with the main project, set the main project as the upstream.
- 
- 1. From terminal, navigate to the project folder.
- 2. Add the main project as the upstream.
- 
- * *SSH*: `git remote add upstream git@github.com:papercss/vuejs-papercss.git`
- * *HTTPS*: `git remote add upstream https://github.com/papercss/vuejs-papercss.git`
+## Working on the documentation
 
-## Workflow
+The documentation is powered by (`vuepress`)[vuepress], make sure to understand how it works before starting to work on the docs:
 
- 1. From terminal, navigate to the project folder.
- 2. Create a new branch, for example `git checkout -b feature-card`
- 3. Make sure that the new branch is up to date with the `develop` branch of the main project. To update the branch first fetch the upstream with `git fetch upstream` and then merge `upstream/develop` into your new branch with `git merge upstream/develop`.
- 4. Start the dev server (`yarn dev` or `npm run dev`)
- 5. Implement your changes. If you add a new component or add a new feature to an existing component, it would help to add a demo for it.
- 6. Make sure that your changes work and display as intended.
- 7. Commit your changes, for example `git commit -m "Added cards component"`.
- 8. Push changes to your forked project on GitHub, for example `git push origin feature-card`.
- 9. Create a pull request from your `feature-card` branch into the `develop` branch of the main project on GitHub.
- 10. Resolve any detected conflicts.
- 11. Fix/discuss any requested changes from peers.
- 12. SUCCESS!
- 
-[slack]: https://papercss.slack.com/messages/C8C6J8YTD
+- All components related documentation is under `/docs/components/`.
+- Other pages such as `quick-start` and `utilities` are in their own folders.
+- `/docs/.vuepress/` contains vuepress configuration and global components for the Vue instance of the docs.
+
+You can start the docs dev-server with `docs:dev`.
+
+## Editing vue-papercss build scripts
+
+`vue-papercss` build the content of `/src` with [rollup](rollup), rollup configuration is splitted into 4 files under `/build`:
+
+- `rollup.config.base.js`: shared rollup config.
+- `rollup.config.browser.js`: creates a `.min.js` ready for browser usage without module-bundler.
+- `rollup.config.es.js`: creates a `.esm.js` for module-bundlers that support ECMAScript Modules.
+- `rollup.config.umd.js`: creates a `.umd.js` for module-bundlers that doesn't support ECMAScript Modules.
+
+When working with the build scripts, you can use 2 commands:
+
+- `yarn dev` which will watch `/src` and compile it using `rollup.config.es.js` config.
+- `yarn build` which will build all variants based on `/src`.
+
 [git]: https://git-scm.com
 [nodejs]: https://nodejs.org
 [yarn]: https://yarnpkg.com
+[vuepress]: https://vuepress.vuejs.org
+[rollup]: https://rollupjs.org/guide/en

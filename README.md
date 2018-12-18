@@ -1,16 +1,6 @@
-<p align="center">
-  <a href="https://getpapercss.com">
-    <img src="https://raw.githubusercontent.com/papercss/papercss/master/docs/static/favicon.ico?raw=true" alt="PaperCSS logo">
-  </a>
+# Vue-PaperCSS
 
-  <h3 align="center">PaperCSS for VueJS</h3>
-
-  <p align="center">
-    An adapted version of the less formal CSS framework, for VueJS.<br>
-    Made for an easy and quick integration for every type of project.
-  </p>
-</p>
-
+> A vue-plugin for the less formal CSS framework, made for an easy and quick integration for every vue-project.
 
 ## Contributing
 

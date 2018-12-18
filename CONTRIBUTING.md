@@ -25,7 +25,7 @@ Before you begin, make sure that you have all of the projects (dev-)dependencies
 
 ## Working on the documentation
 
-The documentation is powered by (`vuepress`)[vuepress], make sure to understand how it works before starting to work on the docs:
+The documentation is powered by [vuepress](vuepress), make sure to understand how it works before starting to work on the docs:
 
 - All components related documentation is under `/docs/components/`.
 - Other pages such as `quick-start` and `utilities` are in their own folders.

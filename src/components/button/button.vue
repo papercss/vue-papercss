@@ -12,9 +12,9 @@
       <slot />
     </a>
 
-    <div v-else>
+    <template v-else>
       <slot />
-    </div>
+    </template>
   </div>
 </template>
 

@@ -22,7 +22,9 @@
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
     "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs",
+    "demo:build": "cd demo && yarn build",
+    "demo:dev": "cd demo && yarn serve"
   },
   "dependencies": {
     "papercss": "^1.6.0",

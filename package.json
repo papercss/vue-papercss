@@ -24,7 +24,8 @@
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "demo:build": "cd demo && yarn build",
-    "demo:dev": "cd demo && yarn serve"
+    "demo:dev": "cd demo && yarn serve",
+    "netlify": "yarn run docs:build"
   },
   "dependencies": {
     "papercss": "^1.6.0",

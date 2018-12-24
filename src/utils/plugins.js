@@ -3,9 +3,9 @@
  *
  * @param {object} VuePlugin Vue-plugin object.
  */
-export function vueUse (VuePlugin) {
+export function vueUse(VuePlugin) {
   if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(VuePlugin)
+    window.Vue.use(VuePlugin);
   }
 }
 

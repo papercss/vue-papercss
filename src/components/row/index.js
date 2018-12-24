@@ -1,3 +1,12 @@
+import { registerComponent, vueUse } from '../../utils';
 import row from './row.vue';
 
-export default row;
+const RowPlugin = {
+  install(Vue) {
+    registerComponent(Vue, 'PRow', row);
+  }
+};
+
+vueUse(RowPlugin);
+
+export default RowPlugin;

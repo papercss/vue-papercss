@@ -1,12 +1,12 @@
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
 
 import rollupBase from './rollup.config.base';
 
 const config = Object.assign({}, rollupBase, {
   output: {
     exports: 'named',
-		file: 'dist/vue-papercss.min.js',
-		format: 'iife',
+    file: 'dist/vue-papercss.min.js',
+    format: 'iife',
     name: 'VuePaperCSS',
   },
 });

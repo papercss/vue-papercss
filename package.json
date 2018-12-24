@@ -25,6 +25,8 @@
     "docs:dev": "vuepress dev docs",
     "demo:build": "cd demo && yarn build",
     "demo:dev": "cd demo && yarn serve",
+    "lint": "eslint ./build/*.js ./src/**/*.js",
+    "lint:fix": "eslint --fix ./build/*.js ./src/**/*.js",
     "netlify": "yarn run docs:build"
   },
   "dependencies": {

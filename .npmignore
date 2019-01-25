@@ -1,10 +1,10 @@
-rollup-plugin-vue/.gitignore
-*.log
-*.swp
-*.yml
-bower.json
-coverage
-config
-dist/*.map
-lib
-test
+# ignore folders
+demo/**/*
+docs/**/*
+src/**/*
+
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+postcss.config.js

@@ -119,11 +119,11 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-0fd60e3c_0", { source: "\n.alert[data-v-0fd60e3c] {\n  transition: all .25s ease-out;\n}\n.alert.closed[data-v-0fd60e3c] {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n.alert .btn-close[data-v-0fd60e3c] {\n  float: right;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/alert/alert.vue"],"names":[],"mappings":";AAmDA;EACA,8BAAA;CACA;AAEA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"alert.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'alert': true,\n    'alert-primary': !color,\n    ['alert-' + color]: color,\n  }\">\n    <slot />\n\n    <span v-if=\"dismissible\" class=\"btn-close\" @click=\"dismiss()\">X</span>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: true,\n    };\n  },\n\n  props: {\n    color: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    dismissible: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    dismiss() {\n      this.$el.className += ' closed';\n      this.displayed = false;\n    },\n\n    show() {\n      if (this.$el.classList.contains('closed')) {\n        this.$el.classList.remove('closed');\n        this.displayed = true;\n      }\n    },\n  },\n}\n</script>\n\n<style scoped>\n.alert {\n  transition: all .25s ease-out;\n}\n\n.alert.closed {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n\n.alert .btn-close {\n  float: right;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-4114768b_0", { source: "\n.alert[data-v-4114768b] {\n  transition: all .25s ease-out;\n}\n.alert.closed[data-v-4114768b] {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n.alert .btn-close[data-v-4114768b] {\n  float: right;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/alert/alert.vue"],"names":[],"mappings":";AAmDA;EACA,8BAAA;CACA;AAEA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"alert.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'alert': true,\n    'alert-primary': !color,\n    ['alert-' + color]: color,\n  }\">\n    <slot />\n\n    <span v-if=\"dismissible\" class=\"btn-close\" @click=\"dismiss()\">X</span>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: true,\n    };\n  },\n\n  props: {\n    color: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    dismissible: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    dismiss() {\n      this.$el.className += ' closed';\n      this.displayed = false;\n    },\n\n    show() {\n      if (this.$el.classList.contains('closed')) {\n        this.$el.classList.remove('closed');\n        this.displayed = true;\n      }\n    },\n  },\n}\n</script>\n\n<style scoped>\n.alert {\n  transition: all .25s ease-out;\n}\n\n.alert.closed {\n  opacity: 0;\n  max-height: 0;\n  margin: 0;\n  padding-bottom: 0;\n  padding-top: 0;\n  border-width: 0;\n}\n\n.alert .btn-close {\n  float: right;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-0fd60e3c";
+  const __vue_scope_id__ = "data-v-4114768b";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */
@@ -137,7 +137,7 @@ __vue_render__._withStripped = true;
     const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/alert/alert.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/alert/alert.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -406,11 +406,11 @@ __vue_render__$1._withStripped = true;
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-f87cf2b8_0", { source: "\n.article .article-meta span[data-v-f87cf2b8] {\n  margin-right: 6px;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/article/article.vue"],"names":[],"mappings":";AAyFA;EACA,kBAAA;CACA","file":"article.vue","sourcesContent":["<template>\n  <article class=\"article\">\n    <h1 class=\"article-title\">\n      <a :href=\"titleLink\" target=\"_blank\">{{title}}</a>\n    </h1>\n\n    <p v-if=\"meta\" class=\"article-meta\">{{meta}}</p>\n\n    <p v-if=\"author && authorLink\" class=\"article-meta\">\n      <span v-if=\"author && authorLink && !date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a>.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}}.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && category && categoryLink\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}} in category <a :href=\"categoryLink\">{{category}}</a>\n      </span>\n    </p>\n\n    <p v-if=\"lead\" class=\"text-lead\">{{lead}}</p>\n\n    <slot />\n  </article>\n</template>\n\n<script>\nexport default {\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    meta: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    lead: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    titleLink: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    author: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    authorLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    date: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    category: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    categoryLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n  },\n}\n</script>\n\n<style scoped>\n.article .article-meta span {\n  margin-right: 6px;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-4e04884d_0", { source: "\n.article .article-meta span[data-v-4e04884d] {\n  margin-right: 6px;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/article/article.vue"],"names":[],"mappings":";AAyFA;EACA,kBAAA;CACA","file":"article.vue","sourcesContent":["<template>\n  <article class=\"article\">\n    <h1 class=\"article-title\">\n      <a :href=\"titleLink\" target=\"_blank\">{{title}}</a>\n    </h1>\n\n    <p v-if=\"meta\" class=\"article-meta\">{{meta}}</p>\n\n    <p v-if=\"author && authorLink\" class=\"article-meta\">\n      <span v-if=\"author && authorLink && !date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a>.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && !category\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}}.\n      </span>\n\n      <span v-else-if=\"author && authorLink && date && category && categoryLink\">\n        Posted by <a :href=\"authorLink\">{{author}}</a> on {{date}} in category <a :href=\"categoryLink\">{{category}}</a>\n      </span>\n    </p>\n\n    <p v-if=\"lead\" class=\"text-lead\">{{lead}}</p>\n\n    <slot />\n  </article>\n</template>\n\n<script>\nexport default {\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    meta: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    lead: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    titleLink: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    author: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    authorLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    date: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    category: {\n      type: String,\n      default: '',\n      required: false,\n    },\n\n    categoryLink: {\n      type: String,\n      default: '',\n      required: false,\n    },\n  },\n}\n</script>\n\n<style scoped>\n.article .article-meta span {\n  margin-right: 6px;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$1 = "data-v-f87cf2b8";
+  const __vue_scope_id__$1 = "data-v-4e04884d";
   /* module identifier */
   const __vue_module_identifier__$1 = undefined;
   /* functional template */
@@ -424,7 +424,7 @@ __vue_render__$1._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/article/article.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/article/article.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -594,7 +594,7 @@ __vue_render__$2._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/badge/badge.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/badge/badge.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -713,8 +713,9 @@ var __vue_render__$3 = function() {
     [
       _vm.href
         ? _c("a", { attrs: { href: _vm.href } }, [_vm._t("default")], 2)
-        : _c("div", [_vm._t("default")], 2)
-    ]
+        : [_vm._t("default")]
+    ],
+    2
   )
   var _obj;
 };
@@ -724,11 +725,11 @@ __vue_render__$3._withStripped = true;
   /* style */
   const __vue_inject_styles__$3 = function (inject) {
     if (!inject) return
-    inject("data-v-44fbd948_0", { source: "\n.paper-btn a[data-v-44fbd948] {\n  background-image: none;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/button/button.vue"],"names":[],"mappings":";AA+DA;EACA,uBAAA;CACA","file":"button.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'paper-btn': true,\n    'btn-block': block,\n    'btn-small': small,\n    'btn-large': large,\n    'disabled': disabled,\n    'btn-primary': !color,\n    ['btn-' + color]: color,\n  }\" :disabled=\"disabled\">\n    <a v-if=\"href\" :href=\"href\">\n      <slot />\n    </a>\n\n    <div v-else>\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n\tprops: {\n\t\tblock: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n\t\tsmall: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    large: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n\n\t\tdisabled: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    color: {\n\t\t  type: String,\n      default: '',\n      required: false,\n    },\n\n\t\thref: {\n\t\t\ttype: String,\n      default: '',\n      required: false,\n\t\t}\n\t}\n}\n</script>\n\n<style scoped>\n.paper-btn a {\n  background-image: none;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-c7c6d5da_0", { source: "\n.paper-btn a[data-v-c7c6d5da] {\n  background-image: none;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/button/button.vue"],"names":[],"mappings":";AA+DA;EACA,uBAAA;CACA","file":"button.vue","sourcesContent":["<template>\n  <div :class=\"{\n    'paper-btn': true,\n    'btn-block': block,\n    'btn-small': small,\n    'btn-large': large,\n    'disabled': disabled,\n    'btn-primary': !color,\n    ['btn-' + color]: color,\n  }\" :disabled=\"disabled\">\n    <a v-if=\"href\" :href=\"href\">\n      <slot />\n    </a>\n\n    <template v-else>\n      <slot />\n    </template>\n  </div>\n</template>\n\n<script>\nexport default {\n\tprops: {\n\t\tblock: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n\t\tsmall: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    large: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n\n\t\tdisabled: {\n\t\t\ttype: Boolean,\n      default: false,\n      required: false,\n\t\t},\n\n    color: {\n\t\t  type: String,\n      default: '',\n      required: false,\n    },\n\n\t\thref: {\n\t\t\ttype: String,\n      default: '',\n      required: false,\n\t\t}\n\t}\n}\n</script>\n\n<style scoped>\n.paper-btn a {\n  background-image: none;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$3 = "data-v-44fbd948";
+  const __vue_scope_id__$3 = "data-v-c7c6d5da";
   /* module identifier */
   const __vue_module_identifier__$3 = undefined;
   /* functional template */
@@ -742,7 +743,7 @@ __vue_render__$3._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/button/button.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/button/button.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -992,7 +993,7 @@ __vue_render__$4._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/card/card.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/card/card.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1139,7 +1140,7 @@ __vue_render__$5._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/col/col.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/col/col.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1248,11 +1249,11 @@ __vue_render__$6._withStripped = true;
   /* style */
   const __vue_inject_styles__$6 = function (inject) {
     if (!inject) return
-    inject("data-v-61628a27_0", { source: "\n.collapsible .collapsible-title[data-v-61628a27] {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n.collapsible .collapsible-body[data-v-61628a27] {\n  opacity: 1;\n  max-height: 960px;\n}\n.collapsible .collapsible-body.hide[data-v-61628a27] {\n  max-height: 0;\n  opacity: 0;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/collapsible/collapsible.vue"],"names":[],"mappings":";AAyCA;EACA,iCAAA;EACA,eAAA;EACA,sBAAA;EACA,iBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,WAAA;EACA,kBAAA;CACA;AAEA;EACA,cAAA;EACA,WAAA;CACA","file":"collapsible.vue","sourcesContent":["<template>\n  <div class=\"collapsible\">\n    <span class=\"collapsible-title\" @click=\"toggle()\">{{title}}</span>\n\n    <div class=\"collapsible-body\" :class=\"{ 'hide': !display }\">\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      display: this.show,\n    };\n  },\n\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    show: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    toggle() {\n      this.display = !this.display;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.collapsible .collapsible-title {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n\n.collapsible .collapsible-body {\n  opacity: 1;\n  max-height: 960px;\n}\n\n.collapsible .collapsible-body.hide {\n  max-height: 0;\n  opacity: 0;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-41cac0d0_0", { source: "\n.collapsible .collapsible-title[data-v-41cac0d0] {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n.collapsible .collapsible-body[data-v-41cac0d0] {\n  opacity: 1;\n  max-height: 960px;\n}\n.collapsible .collapsible-body.hide[data-v-41cac0d0] {\n  max-height: 0;\n  opacity: 0;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/collapsible/collapsible.vue"],"names":[],"mappings":";AAyCA;EACA,iCAAA;EACA,eAAA;EACA,sBAAA;EACA,iBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,WAAA;EACA,kBAAA;CACA;AAEA;EACA,cAAA;EACA,WAAA;CACA","file":"collapsible.vue","sourcesContent":["<template>\n  <div class=\"collapsible\">\n    <span class=\"collapsible-title\" @click=\"toggle()\">{{title}}</span>\n\n    <div class=\"collapsible-body\" :class=\"{ 'hide': !display }\">\n      <slot />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      display: this.show,\n    };\n  },\n\n  props: {\n    title: {\n      type: String,\n      default: '',\n      required: true,\n    },\n\n    show: {\n      type: Boolean,\n      default: false,\n      required: false,\n    },\n  },\n\n  methods: {\n    toggle() {\n      this.display = !this.display;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.collapsible .collapsible-title {\n  border-bottom: 1px solid #e6e7e9;\n  color: #41403e;\n  display: inline-block;\n  font-weight: 600;\n  margin: 0 0 -1px;\n  padding: .75rem;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n}\n\n.collapsible .collapsible-body {\n  opacity: 1;\n  max-height: 960px;\n}\n\n.collapsible .collapsible-body.hide {\n  max-height: 0;\n  opacity: 0;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$6 = "data-v-61628a27";
+  const __vue_scope_id__$6 = "data-v-41cac0d0";
   /* module identifier */
   const __vue_module_identifier__$6 = undefined;
   /* functional template */
@@ -1266,7 +1267,7 @@ __vue_render__$6._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/collapsible/collapsible.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/collapsible/collapsible.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1434,7 +1435,7 @@ __vue_render__$7._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/container/container.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/container/container.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1510,7 +1511,7 @@ __vue_render__$8._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/form-group/form-group.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/form-group/form-group.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1633,7 +1634,7 @@ __vue_render__$9._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/progress/progress.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/progress/progress.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1763,7 +1764,7 @@ __vue_render__$a._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/row/row.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/row/row.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -1860,7 +1861,7 @@ __vue_render__$b._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/table/table.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/table/table.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -2010,11 +2011,11 @@ __vue_render__$c._withStripped = true;
   /* style */
   const __vue_inject_styles__$c = function (inject) {
     if (!inject) return
-    inject("data-v-ecbafc9e_0", { source: "\n.tabs ul[data-v-ecbafc9e] {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n.tabs li[data-v-ecbafc9e] {\n  float: left;\n  text-indent: unset;\n}\n.tabs li[data-v-ecbafc9e]::before {\n  content: none;\n}\n.tabs li a[data-v-ecbafc9e] {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n.tabs li a.active[data-v-ecbafc9e] {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n.tabs li a[data-v-ecbafc9e]:not(.active):hover {\n  color: #868e96;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tabs.vue"],"names":[],"mappings":";AAgEA;EACA,cAAA;EACA,oBAAA;EACA,8BAAA;EACA,sBAAA;EACA,kBAAA;EACA,WAAA;EACA,iBAAA;CACA;AAEA;EACA,YAAA;EACA,mBAAA;CACA;AAEA;EACA,cAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,mBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,iCAAA;CACA;AAEA;EACA,eAAA;CACA","file":"tabs.vue","sourcesContent":["<template>\n  <div class=\"tabs\">\n    <ul>\n      <li v-for=\"(tabNode, index) in tabNodes\" :key=\"'tab-' + index\" @click=\"changeTab(index)\">\n        <a href=\"#\" :class=\"{ 'active': selectedTabIndex === index }\">{{tabNames[index]}}</a>\n      </li>\n    </ul>\n\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  beforeMount() {\n    // Find only `PTab` components and store the `VNode` and tab-name.\n    this.$slots['default'].forEach((vnode) => {\n      if (vnode.componentOptions.tag === 'p-tab') {\n        const tabName = vnode.data.attrs['title'];\n\n        this.tabNodes.push(vnode);\n        this.tabNames.push(tabName);\n      }\n    });\n  },\n\n  mounted() {\n    // Automatically show the first tab if it is present\n    if (this.tabNodes.length > 0 && this.tabNodes[0]) {\n      this.tabNodes[0].componentInstance.showTab();\n    }\n  },\n\n  data() {\n    return {\n      selectedTabIndex: 0,\n      /** @type Vue.VNode[] */\n      tabNodes: [],\n      /** @type String[] */\n      tabNames: [],\n    };\n  },\n\n  methods: {\n    /**\n     * Change the tab by calling the `hideTab` and `showTab` method on the\n     * `PTab` component.\n     *\n     * @param {number} index index of the new tab to display\n     */\n    changeTab(index) {\n      const currentTabVnode = this.tabNodes[this.selectedTabIndex];\n      const newTabVnode = this.tabNodes[index];\n\n      currentTabVnode.componentInstance.hideTab();\n      newTabVnode.componentInstance.showTab();\n\n      this.selectedTabIndex = index;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.tabs ul {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n\n.tabs li {\n  float: left;\n  text-indent: unset;\n}\n\n.tabs li::before {\n  content: none;\n}\n\n.tabs li a {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n\n.tabs li a.active {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n\n.tabs li a:not(.active):hover {\n  color: #868e96;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-cc43344c_0", { source: "\n.tabs ul[data-v-cc43344c] {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n.tabs li[data-v-cc43344c] {\n  float: left;\n  text-indent: unset;\n}\n.tabs li[data-v-cc43344c]::before {\n  content: none;\n}\n.tabs li a[data-v-cc43344c] {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n.tabs li a.active[data-v-cc43344c] {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n.tabs li a[data-v-cc43344c]:not(.active):hover {\n  color: #868e96;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/tabs/tabs.vue"],"names":[],"mappings":";AAgEA;EACA,cAAA;EACA,oBAAA;EACA,8BAAA;EACA,sBAAA;EACA,kBAAA;EACA,WAAA;EACA,iBAAA;CACA;AAEA;EACA,YAAA;EACA,mBAAA;CACA;AAEA;EACA,cAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,mBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,iCAAA;CACA;AAEA;EACA,eAAA;CACA","file":"tabs.vue","sourcesContent":["<template>\n  <div class=\"tabs\">\n    <ul>\n      <li v-for=\"(tabNode, index) in tabNodes\" :key=\"'tab-' + index\" @click=\"changeTab(index)\">\n        <a href=\"#\" :class=\"{ 'active': selectedTabIndex === index }\">{{tabNames[index]}}</a>\n      </li>\n    </ul>\n\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  beforeMount() {\n    // Find only `PTab` components and store the `VNode` and tab-name.\n    this.$slots['default'].forEach((vnode) => {\n      if (vnode.componentOptions.tag === 'p-tab') {\n        const tabName = vnode.data.attrs['title'];\n\n        this.tabNodes.push(vnode);\n        this.tabNames.push(tabName);\n      }\n    });\n  },\n\n  mounted() {\n    // Automatically show the first tab if it is present\n    if (this.tabNodes.length > 0 && this.tabNodes[0]) {\n      this.tabNodes[0].componentInstance.showTab();\n    }\n  },\n\n  data() {\n    return {\n      selectedTabIndex: 0,\n      /** @type Vue.VNode[] */\n      tabNodes: [],\n      /** @type String[] */\n      tabNames: [],\n    };\n  },\n\n  methods: {\n    /**\n     * Change the tab by calling the `hideTab` and `showTab` method on the\n     * `PTab` component.\n     *\n     * @param {number} index index of the new tab to display\n     */\n    changeTab(index) {\n      const currentTabVnode = this.tabNodes[this.selectedTabIndex];\n      const newTabVnode = this.tabNodes[index];\n\n      currentTabVnode.componentInstance.hideTab();\n      newTabVnode.componentInstance.showTab();\n\n      this.selectedTabIndex = index;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.tabs ul {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  list-style-type: none;\n  margin: 0 0 8px 0;\n  padding: 0;\n  overflow: hidden;\n}\n\n.tabs li {\n  float: left;\n  text-indent: unset;\n}\n\n.tabs li::before {\n  content: none;\n}\n\n.tabs li a {\n  display: block;\n  padding: 14px 16px;\n  text-align: center;\n  color: #c1c0bd;\n  font-weight: 600;\n  text-decoration: none;\n  background-image: none;\n}\n\n.tabs li a.active {\n  color: #41403e;\n  border-bottom: solid 3px #0071de;\n}\n\n.tabs li a:not(.active):hover {\n  color: #868e96;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$c = "data-v-ecbafc9e";
+  const __vue_scope_id__$c = "data-v-cc43344c";
   /* module identifier */
   const __vue_module_identifier__$c = undefined;
   /* functional template */
@@ -2028,7 +2029,7 @@ __vue_render__$c._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tabs.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/tabs/tabs.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -2181,11 +2182,11 @@ __vue_render__$d._withStripped = true;
   /* style */
   const __vue_inject_styles__$d = function (inject) {
     if (!inject) return
-    inject("data-v-e137ae22_0", { source: "\n.content.show[data-v-e137ae22] {\n  display: block;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue"],"names":[],"mappings":";AA2BA;EACA,eAAA;CACA","file":"tab.vue","sourcesContent":["<template>\n  <div class=\"content\" :class=\"{ 'show': displayed }\">\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: false,\n    };\n  },\n\n  methods: {\n    hideTab() {\n      this.displayed = false;\n    },\n\n    showTab() {\n      this.displayed = true;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.content.show {\n  display: block;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-614215e6_0", { source: "\n.content.show[data-v-614215e6] {\n  display: block;\n}\n", map: {"version":3,"sources":["/Users/totominc/Desktop/Git/vue-papercss/src/components/tabs/tab.vue"],"names":[],"mappings":";AA2BA;EACA,eAAA;CACA","file":"tab.vue","sourcesContent":["<template>\n  <div class=\"content\" :class=\"{ 'show': displayed }\">\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      displayed: false,\n    };\n  },\n\n  methods: {\n    hideTab() {\n      this.displayed = false;\n    },\n\n    showTab() {\n      this.displayed = true;\n    },\n  },\n}\n</script>\n\n<style scoped>\n.content.show {\n  display: block;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$d = "data-v-e137ae22";
+  const __vue_scope_id__$d = "data-v-614215e6";
   /* module identifier */
   const __vue_module_identifier__$d = undefined;
   /* functional template */
@@ -2199,7 +2200,7 @@ __vue_render__$d._withStripped = true;
     const component = (typeof script === 'function' ? script.options : script) || {};
 
     // For security concerns, we use only base name in production mode.
-    component.__file = "/Users/totominc/Desktop/Git/vuejs-papercss/src/components/tabs/tab.vue";
+    component.__file = "/Users/totominc/Desktop/Git/vue-papercss/src/components/tabs/tab.vue";
 
     if (!component.render) {
       component.render = template.render;

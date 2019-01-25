@@ -12,10 +12,10 @@ const VuePaperCSSPlugin = {
     /**
      * Register all components into the Vue instance.
      */
-    for (let plugin in components) {
+    for (const plugin in components) {
       Vue.use(components[plugin]);
     }
-  }
+  },
 };
 
 /**

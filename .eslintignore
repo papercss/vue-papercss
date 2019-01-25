@@ -1,2 +1,3 @@
-src/**/*.js
-src/**/*.vue
+demo/**/*.js
+dist/*.js
+docs/**/*.js

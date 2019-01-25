@@ -25,6 +25,8 @@
     "docs:dev": "vuepress dev docs",
     "demo:build": "cd demo && yarn build",
     "demo:dev": "cd demo && yarn serve",
+    "lint": "eslint ./build/*.js ./src/*.js ./src/**/*.js",
+    "lint:fix": "eslint --fix ./build/*.js ./src/*.js ./src/**/*.js",
     "netlify": "yarn run docs:build"
   },
   "dependencies": {
@@ -35,6 +37,9 @@
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "cross-env": "^5.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "rollup": "^0.67.4",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",

@@ -1,3 +1,12 @@
+import { registerComponent, vueUse } from '../../utils';
 import container from './container.vue';
 
-export default container;
+const ContainerPlugin = {
+  install(Vue) {
+    registerComponent(Vue, 'PContainer', container);
+  }
+};
+
+vueUse(ContainerPlugin);
+
+export default ContainerPlugin;

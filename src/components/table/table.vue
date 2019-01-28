@@ -5,21 +5,21 @@
 </template>
 
 <script>
-  export default {
-    name: "table",
-    props: {
-      alternating: {
-        type: Boolean,
-        default: false
-      },
-      hover: {
-        type: Boolean,
-        default: false
-      }
-    }
-  }
-</script>
+export default {
+  name: 'table',
 
-<style lang="css" scoped>
-  @import url('../../../node_modules/papercss/dist/components/tables.css');
-</style>
+  props: {
+    alternating: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+
+    hover: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+  },
+}
+</script>

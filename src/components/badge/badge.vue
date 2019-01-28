@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <span :class="{ 'badge': true, [color]: color }">
     <slot />
   </span>
@@ -6,15 +6,14 @@
 
 <script>
 export default {
+  name: 'PBadge',
+
 	props: {
     color: {
       type: String,
-      default: ''
-    }
-	}
+      default: '',
+      required: false,
+    },
+	},
 }
 </script>
-
-<style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/badges.css');
-</style>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="card">
     <div v-if="header" class="card-header">{{header}}</div>
 
@@ -23,46 +23,50 @@ export default {
     title: {
       type: String,
       default: '',
+      required: false,
     },
 
     subtitle: {
       type: String,
       default: '',
+      required: false,
     },
 
     text: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgSrc: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgAlt: {
       type: String,
       default: '',
+      required: false,
     },
 
     imgBottom: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     header: {
       type: String,
       default: '',
+      required: false,
     },
 
     footer: {
       type: String,
       default: '',
+      required: false,
     },
   },
 }
 </script>
-
-<style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/cards.css');
-</style>

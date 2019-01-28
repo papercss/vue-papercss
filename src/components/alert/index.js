@@ -1,3 +1,12 @@
+import { registerComponent, vueUse } from '../../utils';
 import alert from './alert.vue';
 
-export default alert;
+const AlertPlugin = {
+  install(Vue) {
+    registerComponent(Vue, 'PAlert', alert);
+  }
+};
+
+vueUse(AlertPlugin);
+
+export default AlertPlugin;

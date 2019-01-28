@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div :class="[
     'col',
     col ? 'col-' + col : '',
@@ -20,48 +20,52 @@ export default {
     col: {
       type: String,
       default: null,
+      required: false,
     },
 
     lg: {
       type: String,
       default: null,
+      required: false,
     },
 
     md: {
       type: String,
       default: null,
+      required: false,
     },
 
     sm: {
       type: String,
       default: null,
+      required: false,
     },
 
     fill: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     bottom: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     middle: {
       type: Boolean,
       default: false,
+      required: false,
     },
 
     top: {
       type: Boolean,
       default: false,
+      required: false,
     },
   },
 
   computed: {},
 }
 </script>
-
-<style scoped lang="css">
-@import url('../../../node_modules/papercss/dist/components/flexbox.css');
-</style>

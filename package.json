@@ -5,6 +5,10 @@
   "main": "dist/vue-papercss.min.js",
   "author": "Thomas Cazade <cazade.thomas@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papercss/vue-papercss.git"
+  },
   "keywords": [
     "papercss",
     "vue",
